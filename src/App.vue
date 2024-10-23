@@ -4,6 +4,9 @@
   import DisplayApps from "@/views/DisplayApps.vue";
   import About from "@/views/About.vue";
   import FuaturesApps from "@/views/FuaturesApps.vue";
+  import Products from "@/views/Products.vue";
+  import ReviewCustomer from "@/views/ReviewCustomer.vue";
+  import FooterComponent from "@/views/Footer.vue";
 
 </script>
 
@@ -14,6 +17,9 @@
     <DisplayApps/>
     <About/>
     <FuaturesApps/>
+    <Products/>
+    <ReviewCustomer/>
+    <FooterComponent/>
   </body>
 </template>
 

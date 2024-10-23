@@ -8,11 +8,11 @@ import {Icon} from "@iconify/vue";
     <div class="container bg-white rounded-xl overflow-hidden flex drop-shadow-lg h-96 justify-between">
       <div class="pl-20 pt-10">
         <p class="text-4xl">About Panic Button</p>
-        <article class="w-[650px] mt-4 text-lg text-mediumGrey">
-          The Panic Button application is an application designed to
-          facilitate the purchase and management of Panic Button tools.
-          This application allows users, both individuals and companies,
-          to search, select, and order various types of Panic Button as needed. </article>
+        <article class="w-[700px] mt-4 text-lg text-mediumGrey">
+          Aplikasi Tombol Panik adalah aplikasi yang dirancang untuk
+          memfasilitasi pembelian dan pengelolaan alat Panic Button.
+          Aplikasi ini memungkinkan pengguna, baik perorangan maupun perusahaan,
+          untuk mencari, memilih, dan memesan berbagai jenis Panic Button sesuai kebutuhan. </article>
         <div class="flex gap-3 mt-20">
           <div class="w-48">
             <a

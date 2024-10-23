@@ -11,7 +11,10 @@ export default {
         mediumRed: '#FF2C2C',
         lightGray: '#B8B8B8',
         vividRed: '#DA1002',
-        vividOrangeRed: '#F5122D'
+        vividOrangeRed: '#F5122D',
+        darkGray: '#3b3b3b',
+        blacc: '#101828',
+        test: '#475467'
       },
       backgroundImage: {
         'hero-baner-background': "url('/public/assets_Image/bg-fuature-apps.png')"
