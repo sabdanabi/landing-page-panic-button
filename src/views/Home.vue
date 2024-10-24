@@ -20,7 +20,7 @@ import { Icon } from "@iconify/vue";
 
         <div>
           <p class="text-6xl w-[900px] leading-[6rem] text-center font-base">
-            Tekan sekali, bantuan akan datang. Tombol Panik Anda!
+            Tekan sekali, bantuan akan datang. Panic Button Anda!
           </p>
           <article class="text-xl w-[750px] text-center ml-16 text-mediumGrey mt-3">
             Aplikasi Tombol Panik adalah sebuah inovasi untuk meningkatkan respons terhadap situasi darurat dan kejahatan.
