@@ -7,6 +7,7 @@
   import Products from "@/views/Products.vue";
   import ReviewCustomer from "@/views/ReviewCustomer.vue";
   import FooterComponent from "@/views/Footer.vue";
+  import Intructios from "@/views/Intructios.vue";
 
 </script>
 
@@ -17,6 +18,7 @@
     <DisplayApps/>
     <About/>
     <FuaturesApps/>
+    <Intructios/>
     <Products/>
     <ReviewCustomer/>
     <FooterComponent/>
