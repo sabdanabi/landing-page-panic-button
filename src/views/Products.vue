@@ -16,7 +16,7 @@ const closePopup = () => {
 </script>
 
 <template>
-  <section class="container px-20 font-poppins py-24">
+  <section id="products" class="container px-20 font-poppins py-24">
     <p class="text-4xl">Products</p>
     <div class="flex gap-24 mt-10 ml-10">
 
@@ -39,12 +39,13 @@ const closePopup = () => {
       </div>
     </div>
 
-
     <div v-if="showPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
       <div class="bg-white p-8 rounded-lg shadow-lg w-1/3">
-        <img src="/assets_image/assest_image_products/panic-button-gps.png" alt="image-product">
-        <h2 class="text-2xl mb-4 mt-3">{{ selectedProduct }}</h2>
-        <p>Panic Button dengan GPS adalah perangkat keamanan
+        <span class="flex justify-center items-center">
+          <img src="/assets_image/assest_image_products/panic-button-gps.png" alt="image-product">
+        </span>
+        <h2 class="text-xl mb-4 mt-5 flex justify-center items-center">{{ selectedProduct }}</h2>
+        <p class="text-center text-xs">Panic Button dengan GPS adalah perangkat keamanan
           inovatif yang dirancang untuk memberikan perlindungan
           dan rasa aman bagi pengguna dalam situasi darurat. Dengan
           teknologi pelacakan GPS yang canggih, perangkat ini memastikan

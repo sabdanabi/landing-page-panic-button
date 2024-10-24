@@ -12,7 +12,7 @@ import {Icon} from "@iconify/vue";
           Aplikasi Tombol Panik adalah aplikasi yang dirancang untuk
           memfasilitasi pembelian dan pengelolaan alat Panic Button.
           Aplikasi ini memungkinkan pengguna, baik perorangan maupun perusahaan,
-          untuk mencari, memilih, dan memesan berbagai jenis Panic Button sesuai kebutuhan. </article>
+          untuk mencari, memilih, dan memesan berbagai jenis Panic Button sesuai kebutuhan.</article>
         <div class="flex gap-3 mt-20">
           <div class="w-48">
             <a

@@ -4,7 +4,7 @@ import {Icon} from "@iconify/vue";
 </script>
 
 <template>
-  <footer class="container px-20 font-poppins py-24">
+  <footer id="footer" class="container px-20 font-poppins py-24 ">
     <div class="col-span-2 md:col-span-1">
       <img src="/assets_image/logo-panic-button.png" alt="SOS Logo" class="w-24 mb-4" />
     </div>

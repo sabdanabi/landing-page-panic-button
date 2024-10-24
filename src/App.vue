@@ -8,12 +8,13 @@
   import ReviewCustomer from "@/views/ReviewCustomer.vue";
   import FooterComponent from "@/views/Footer.vue";
   import Intructios from "@/views/Intructios.vue";
-
+  import FloatingButton from "@/components/FloatingButton.vue";
 </script>
 
 <template>
   <body class="">
     <Navbar/>
+    <FloatingButton/>
     <Home/>
     <DisplayApps/>
     <About/>
@@ -26,4 +27,5 @@
 </template>
 
 <style scoped>
+
 </style>

@@ -1,5 +1,6 @@
 <script setup>
 import { Icon } from "@iconify/vue";
+
 </script>
 
 <template>
@@ -28,7 +29,7 @@ import { Icon } from "@iconify/vue";
 
           <div class="flex justify-center items-center mt-5">
             <button class="bg-vividRed rounded-full text-white w-72 h-14 text-lg">
-              Tentang Panic Button
+              <router-link to="/#about">Tentang Panic Button</router-link>
             </button>
             <span class="bg-vividRed py-3 px-5 rounded-full text-white ml-2">
               <Icon icon="formkit:arrowdown" width="16" />
@@ -39,12 +40,12 @@ import { Icon } from "@iconify/vue";
         </div>
       </div>
 
-      <div class="w-96 h-96 absolute bottom-40 right-0 overflow-hidden">
+      <div class="w-96 h-96 absolute bottom-28 right-0 overflow-hidden">
         <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="ml-20" />
       </div>
     </div>
 
-    <ul class="flex items-center text-center justify-center text-vividRed font-medium gap-24 mt-24">
+    <ul class="flex items-center text-center justify-center text-vividRed font-medium gap-24 mt-24 mb-20">
       <li class="flex">
         <Icon icon="lets-icons:check-fill" width="25" class="mr-2" /> Lorem ipsum dolor sit amet
       </li>
@@ -59,5 +60,5 @@ import { Icon } from "@iconify/vue";
 </template>
 
 <style scoped>
-/* Add any specific styles here if needed */
+
 </style>

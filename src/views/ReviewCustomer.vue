@@ -5,7 +5,7 @@ import { Icon } from "@iconify/vue";
 </script>
 
 <template>
-  <section class="container px-20 font-poppins py-24">
+  <section id="review" class="container px-20 font-poppins py-24">
     <div class="flex justify-center items-center">
       <div class="text-center">
         <p class="text-4xl">Testimoni dari pelanggan</p>

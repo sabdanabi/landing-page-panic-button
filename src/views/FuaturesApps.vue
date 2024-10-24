@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section id="fuature" class="px-44 font-poppins relative">
+  <section id="fuatures" class="px-44 font-poppins relative">
     <div class="bg-hero-baner-background w-full h-72 relative flex justify-center items-center">
       <div class="text-center ">
         <p class="text-4xl">Panic Button App Features</p>
