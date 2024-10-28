@@ -12,7 +12,6 @@
 </script>
 
 <template>
-  <body class="">
     <Navbar/>
     <FloatingButton/>
     <Home/>
@@ -23,7 +22,6 @@
     <Products/>
     <ReviewCustomer/>
     <FooterComponent/>
-  </body>
 </template>
 
 <style scoped>
