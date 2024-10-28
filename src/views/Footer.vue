@@ -8,7 +8,7 @@ import {Icon} from "@iconify/vue";
     <div class="col-span-2 md:col-span-1">
       <img src="/assets_image/logo-panic-button.png" alt="SOS Logo" class="w-24 mb-4" />
     </div>
-    <div class="container mx-auto grid grid-cols-2 md:grid-cols-6 gap-8 text-gray-700">
+    <div class="container mx-auto flex gap-24 text-gray-700">
       <div>
         <h4 class="font-bold mb-4">Services</h4>
         <ul>
@@ -44,13 +44,13 @@ import {Icon} from "@iconify/vue";
             <span class="mr-2">📞</span>+39 346 368 5708
           </li>
           <li class="flex items-center">
-            <span class="mr-2">✉️</span>italialinlimo@gmail.com
+            <span class="mr-2">✉️</span>can@gmail.com
           </li>
         </ul>
       </div>
 
       <div class="">
-        <h4 class="font-bold mb-4">Social Media</h4>
+        <h4 class="font-bold mb-4 ml-5">Social Media</h4>
         <div class="flex space-x-4 ">
          <span class="bg-vividOrangeRed w-12 h-12 text-lg flex items-center justify-center rounded-full ml-5">
            <a href="#"><Icon icon="ic:baseline-whatsapp" width="25" height="25" class="text-white"/></a>

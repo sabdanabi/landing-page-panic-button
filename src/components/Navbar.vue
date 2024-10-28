@@ -37,7 +37,7 @@ import {onMounted, onBeforeUnmount, ref} from 'vue';
       </ul>
       <button class="bg-transparent border-2 border-mediumRed py-2 px-8 rounded-lg flex gap-4">
         <img src="/assets_image/playstore-logo.png" alt="image">
-        Get Apps
+          <a href="https://play.google.com">Get Apps</a>
       </button>
     </div>
   </nav>
