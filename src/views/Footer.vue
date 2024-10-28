@@ -6,37 +6,37 @@ import {Icon} from "@iconify/vue";
 <template>
   <footer id="footer" class="container px-20 font-poppins py-24 ">
     <div class="col-span-2 md:col-span-1">
-      <img src="/assets_image/logo-panic-button.png" alt="SOS Logo" class="w-24 mb-4" />
+      <img src="/assets_image/logo-panic-button.png" alt="SOS Logo" class="xl:w-24 lg:w-20 mb-4" />
     </div>
     <div class="container mx-auto flex gap-24 text-gray-700">
       <div>
-        <h4 class="font-bold mb-4">Services</h4>
-        <ul>
+        <h4 class="font-bold mb-4 xl:text-base lg:text-sm">Services</h4>
+        <ul class="xl:text-base lg:text-xs">
           <li><a href="#" class="hover:text-red-500">Pemesanan Alat Panic Button</a></li>
-          <li><a href="#" class="hover:text-red-500">Kemudahan Akses Pengguna</a></li>
+          <li class="my-3"><a href="#" class="hover:text-red-500">Kemudahan Akses Pengguna</a></li>
           <li><a href="#" class="hover:text-red-500">Katalog panic Button</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-bold mb-4">Home</h4>
-        <ul>
+        <h4 class="font-bold mb-4 xl:text-base lg:text-sm">Home</h4>
+        <ul class="xl:text-base lg:text-xs">
           <li><a href="#" class="hover:text-red-500">Home</a></li>
           <li><a href="#" class="hover:text-red-500">About Us</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-bold mb-4">Help</h4>
-        <ul>
+        <h4 class="font-bold mb-4 xl:text-base lg:text-sm">Help</h4>
+        <ul class="xl:text-base lg:text-xs">
           <li><a href="#" class="hover:text-red-500">Terms of Use</a></li>
           <li><a href="#" class="hover:text-red-500">Privacy Policy</a></li>
         </ul>
       </div>
 
       <div>
-        <h4 class="font-bold mb-4">Contacts</h4>
-        <ul>
+        <h4 class="font-bold mb-4 xl:text-base lg:text-sm">Contacts</h4>
+        <ul class="xl:text-base lg:text-xs">
           <li class="flex items-center">
             <span class="mr-2">📍</span>Lorem ipsum dolor sit amet, conr
           </li>
@@ -50,7 +50,7 @@ import {Icon} from "@iconify/vue";
       </div>
 
       <div class="">
-        <h4 class="font-bold mb-4 ml-5">Social Media</h4>
+        <h4 class="font-bold mb-4 ml-5 xl:text-base lg:text-sm">Social Media</h4>
         <div class="flex space-x-4 ">
          <span class="bg-vividOrangeRed w-12 h-12 text-lg flex items-center justify-center rounded-full ml-5">
            <a href="#"><Icon icon="ic:baseline-whatsapp" width="25" height="25" class="text-white"/></a>

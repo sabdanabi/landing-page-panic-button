@@ -3,3 +3,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.style-number {
+    @apply xl:px-6 xl:py-4 rounded-lg text-white font-medium xl:text-5xl
+    lg:text-3xl lg:px-3 lg:py-2
+}
+
+.style-desc-intruction {
+    @apply xl:text-sm lg:text-xs xl:w-80 lg:w-64 font-medium text-mediumGrey
+}
+

@@ -28,15 +28,14 @@ const selectedProduct = ref(null);
 const openPopup = (product) => {
   selectedProduct.value = product;
   showPopup.value = true;
-  document.body.style.overflow = 'hidden'; // Cegah scroll
+  document.body.style.overflow = 'hidden';
 };
 
 const closePopup = () => {
   showPopup.value = false;
-  document.body.style.overflow = ''; // Izinkan scroll kembali
+  document.body.style.overflow = '';
 };
 
-// Pastikan scroll kembali normal saat komponen di-unmount
 onUnmounted(() => {
   document.body.style.overflow = '';
 });
@@ -65,7 +64,7 @@ onUnmounted(() => {
     <div v-if="showPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center mt-20">
       <div class="bg-white p-8 rounded-lg shadow-lg w-1/3">
         <span class="flex justify-center items-center">
-          <img :src="selectedProduct?.img" :alt="selectedProduct?.name" class="w-96 h-auto">
+          <img :src="selectedProduct?.img" :alt="selectedProduct?.name" class="xl:w-96 lg:w-44 h-auto">
         </span>
         <h2 class="text-xl mb-4 mt-5 flex justify-center items-center">{{ selectedProduct?.name }}</h2>
         <p class="text-center text-xs">{{ selectedProduct?.desc }}</p>
