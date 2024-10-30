@@ -6,10 +6,14 @@
 
 .style-number {
     @apply xl:px-6 xl:py-4 rounded-lg text-white font-medium xl:text-5xl
-    lg:text-3xl lg:px-3 lg:py-2 md:px-3 md:py-2 text-base px-3 py-2
+    lg:text-3xl lg:px-3 lg:py-2 md:px-3 md:py-2 text-base px-3 py-2;
 }
 
 .style-desc-intruction {
-    @apply xl:text-sm lg:text-xs xl:w-80 lg:w-64 font-medium text-mediumGrey text-xs
+    @apply xl:text-sm lg:text-xs xl:w-80 lg:w-64 font-medium text-mediumGrey text-xs;
+}
+
+.style-border-intruction {
+    @apply md:border md:pl-5 md:py-3 md:rounded-lg md:mt-5;
 }
 
