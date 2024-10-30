@@ -4,12 +4,13 @@ import {Icon} from "@iconify/vue";
 </script>
 
 <template>
-  <footer id="footer" class="container px-20 font-poppins py-16 ">
+  <footer id="footer" class="container lg:px-20 md:px-20 xl:px-20 px-10 font-poppins py-16 ">
     <div class="col-span-2 md:col-span-1">
-      <img src="/assets_image/logo-panic-button.png" alt="SOS Logo" class="xl:w-24 lg:w-20 mb-4 md:w-16" />
+      <img src="/assets_image/logo-panic-button.png" alt="SOS Logo" class="xl:w-24 lg:w-20 mb-4 md:w-16 w-16" />
     </div>
 
-    <div class="lg:hidden md:block">
+    <div class="lg:hidden md:block xl:hidden">
+
       <div class="">
         <div class="flex space-x-4 justify-center items-center ">
          <span class="bg-vividOrangeRed w-10 h-10 text-lg flex items-center justify-center rounded-full ml-5">
@@ -23,6 +24,7 @@ import {Icon} from "@iconify/vue";
          </span>
         </div>
       </div>
+
       <div class="space-y-4 text-gray-400 mt-4">
         <div class="flex space-x-4 justify-center items-center">
           <span>Service</span>
@@ -34,10 +36,11 @@ import {Icon} from "@iconify/vue";
           <span>Home</span>
         </div>
       </div>
-      <p></p>
+
+      <p class="text-xs flex justify-center items-center mt-3">&copy; 2024 Can Creative. All Rights Reserved.</p>
     </div>
 
-    <div class="container md:hidden lg:block">
+    <div class="container hidden xl:block lg:block ">
       <div class="mx-auto flex gap-10 text-gray-700 container">
         <div>
           <h4 class="font-bold mb-4 xl:text-base lg:text-sm">Services</h4>
@@ -54,6 +57,9 @@ import {Icon} from "@iconify/vue";
             <li><a href="#" class="hover:text-red-500">Home</a></li>
             <li><a href="#" class="hover:text-red-500">About Us</a></li>
           </ul>
+
+          <p>&copy; 2024 Can Creative. All Rights Reserved.</p>
+
         </div>
 
         <div>
