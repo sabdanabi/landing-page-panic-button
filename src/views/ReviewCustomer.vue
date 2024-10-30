@@ -60,7 +60,7 @@ const userReviews = [
 
 <template>
 
-  <section id="review" class="container md:px-20 lg:px-20 xl:px-20 px-8 font-poppins pt-16">
+  <section id="review" class=" md:px-20 lg:px-20 xl:px-20 px-8 font-poppins pt-16">
     <div class="flex justify-center items-center">
       <div class="text-center">
         <p class="xl:text-4xl lg:text-3xl md:text-2xl text-base font-medium">Testimoni dari pelanggan</p>

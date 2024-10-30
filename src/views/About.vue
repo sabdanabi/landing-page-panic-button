@@ -4,7 +4,7 @@ import {Icon} from "@iconify/vue";
 </script>
 
 <template>
-  <section id="about" class="container px-20 font-poppins py-24">
+  <section id="about" class="px-20 font-poppins py-24">
     <div class="container bg-white rounded-xl overflow-hidden flex drop-shadow-lg xl:h-96 lg:h-96 justify-between">
       <div class="lg:pl-20 md:pt-10 md:pl-14 p-3">
         <p class="xl:text-4xl lg:text-3xl md:text-xl font-medium text-base ">About Panic Button</p>

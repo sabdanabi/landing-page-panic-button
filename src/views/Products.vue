@@ -46,7 +46,7 @@
 </script>
 
 <template>
-  <section id="products" class="container xl:px-20 lg:px-20 font-poppins md:py-24 xl:py-24 lg:py-24 md:px-12 px-10">
+  <section id="products" class="xl:px-20 lg:px-20 font-poppins md:py-24 xl:py-24 lg:py-24 md:px-12 px-10">
     <p class="md:text-4xl xl:text-4xl lg:text-4xl text-xl font-medium">Products</p>
 
     <div class="hidden md:block xl:block lg:block">

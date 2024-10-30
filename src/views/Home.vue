@@ -4,7 +4,7 @@ import { Icon } from "@iconify/vue";
 </script>
 
 <template>
-  <section id="home" class="font-poppins container md:mx-auto ">
+  <section id="home" class="font-poppins container md:mx-auto">
     <div class="flex justify-center items-center xl:mt-40 md:mt-28 lg:mt-28 mt-20 lg:ml-0 relative w-full px-20">
         <div>
           <p class="xl:text-6xl lg:text-3xl md:text-xl md:w-96 lg:w-[420px]
@@ -57,7 +57,7 @@ import { Icon } from "@iconify/vue";
       </div>
 
       <div class="xl:w-96 xl:h-96 md:right-0 md:w-64 md:-top-12 absolute xl:bottom-16 md:block
-      xl:right-0 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 overflow-hidden w-64 right-0 -top-10 hidden">
+      xl:-right-20 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 overflow-hidden w-64 right-0 -top-10 hidden">
         <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="ml-20" />
       </div>
     </div>

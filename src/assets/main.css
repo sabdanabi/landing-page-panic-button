@@ -14,6 +14,6 @@
 }
 
 .style-border-intruction {
-    @apply md:border md:pl-5 md:py-3 md:rounded-lg md:mt-5;
+    @apply md:border md:pl-5 md:py-3 md:rounded-lg md:mt-5 xl:mt-10;
 }
 

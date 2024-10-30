@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section id="intructio-section" class="container lg:px-24 md:px-16 px-12 xl:px-32 font-poppins py-24">
+  <section id="intructio-section" class="lg:px-24 md:px-16 px-12 xl:px-10 font-poppins py-24">
 
     <div class="relative flex justify-center items-center md:mt-20">
       <div class="text-center">
@@ -18,7 +18,7 @@
       <div>
         <span class="bg-paradisePink style-number">01</span>
         <div class="style-border-intruction">
-          <p class="xl:mt-10 lg:mt-7 lg:text-base md:text-sm font-semibold md:w-64 w-72 mt-2 md:mt-0">
+          <p class="xl:mt-0 lg:mt-7 lg:text-base md:text-sm font-semibold md:w-64 w-72 mt-2 md:mt-0">
             Download Aplikasi Panic Button
           </p>
           <p class="style-desc-intruction md:w-52 w-64">
@@ -34,7 +34,7 @@
       <div class="md:mt-28 my-5">
         <span class="bg-tuftsBlu style-number">02</span>
         <div class="style-border-intruction">
-          <p class="xl:mt-10 text-lg font-semibold md:text-sm md:w-64 w-72 mt-2 md:mt-0">
+          <p class="xl:mt-0 text-lg font-semibold md:text-sm md:w-64 w-72 mt-2 md:mt-0">
             Permintaan Pasang Panic Button
           </p>
           <p class="style-desc-intruction md:w-60 w-64">
@@ -43,15 +43,15 @@
         </div>
       </div>
 
-      <span class="absolute xl:right-60 lg:right-56 top-14 md:right-36 hidden md:block">
-        <img src="/assets_image/assets_image_intructios_section/arrow-up-1.png" alt="image-arrow" class="xl:w-60 lg:w-32 md:w-32">
+      <span class="absolute xl:right-[345px] lg:right-56 top-14 md:right-36 hidden md:block">
+        <img src="/assets_image/assets_image_intructios_section/arrow-up-1.png" alt="image-arrow" class="xl:w-52 lg:w-32 md:w-32">
       </span>
 
       <div class="md:relative">
         <div class="md:absolute md:-right-20 md:bottom-36">
           <span class="bg-mediumSlateBlue style-number">03</span>
           <div class="style-border-intruction">
-            <p class="xl:mt-10 text-lg font-semibold md:text-sm md:w-36 md:mt-0 mt-2">
+            <p class="xl:mt-0 text-lg font-semibold md:text-sm md:w-36 md:mt-0 mt-2">
               Petugas datang
             </p>
             <p class="style-desc-intruction md:w-32 w-64">
@@ -71,7 +71,7 @@
         <div>
           <span class="bg-mediumAquamarine style-number">04</span>
           <div class="style-border-intruction">
-            <p class="mt-2 md:mt-0 xl:mt-10 text-lg font-semibold md:text-sm md:w-64 w-72">
+            <p class="mt-2 md:mt-0 xl:mt-0 text-lg font-semibold md:text-sm md:w-64 w-72">
               Tekan Tombol pada Alat Panic Button
             </p>
             <p class="style-desc-intruction text-mediumGrey md:w-56 w-64">
@@ -87,7 +87,7 @@
         <div class="md:mt-28 my-5">
           <span class="bg-burntSienna style-number">05</span>
           <div class="style-border-intruction">
-            <p class="mt-2 xl:mt-10 text-lg font-semibold md:text-sm md:w-64 md:mt-0 w-72">
+            <p class="mt-2 xl:mt-0 text-lg font-semibold md:text-sm md:w-64 md:mt-0 w-72">
               Petugas konfirmasi Permintaan
             </p>
             <p class="style-desc-intruction md:w-[234px] w-64">
@@ -96,15 +96,15 @@
           </div>
         </div>
 
-        <span class="absolute xl:right-60 lg:right-60 top-16 md:right-44 hidden md:block">
-          <img src="/assets_image/assets_image_intructios_section/arrow-up-2.png" alt="image-arrow" class="xl:w-52 lg:w-28 md:w-28">
+        <span class="absolute xl:right-[365px] lg:right-60 top-16 md:right-44 hidden md:block">
+          <img src="/assets_image/assets_image_intructios_section/arrow-up-2.png" alt="image-arrow" class="xl:w-44 lg:w-28 md:w-28">
         </span>
 
         <div class="md:relative">
           <div class="md:absolute md:-right-20 md:bottom-36">
             <span class="bg-mediumOrchid style-number">06</span>
             <div class="style-border-intruction">
-              <p class="mt-2 xl:mt-10 text-lg font-semibold md:text-sm md:w-40 md:mt-0 w-72">
+              <p class="mt-2 xl:mt-0 text-lg font-semibold md:text-sm md:w-40 md:mt-0 w-72">
                 Review dari Aplikasi
               </p>
               <p class="style-desc-intruction md:w-36 w-64">
