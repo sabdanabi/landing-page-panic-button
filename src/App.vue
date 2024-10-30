@@ -12,8 +12,10 @@
 </script>
 
 <template>
-    <Navbar/>
-    <FloatingButton/>
+    <div class="hidden md:block">
+      <Navbar/>
+    </div>
+<!--    <FloatingButton/>-->
     <Home/>
     <DisplayApps/>
     <About/>

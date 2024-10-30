@@ -4,15 +4,42 @@ import {Icon} from "@iconify/vue";
 </script>
 
 <template>
-  <footer id="footer" class="container px-20 font-poppins py-24 ">
+  <footer id="footer" class="container px-20 font-poppins py-16 ">
     <div class="col-span-2 md:col-span-1">
-      <img src="/assets_image/logo-panic-button.png" alt="SOS Logo" class="xl:w-24 lg:w-20 mb-4" />
+      <img src="/assets_image/logo-panic-button.png" alt="SOS Logo" class="xl:w-24 lg:w-20 mb-4 md:w-16" />
     </div>
-    <div class="container mx-auto flex gap-24 text-gray-700">
+    <div>
+      <div class="">
+        <div class="flex space-x-4 justify-center items-center ">
+         <span class="bg-vividOrangeRed w-10 h-10 text-lg flex items-center justify-center rounded-full ml-5">
+           <a href="#"><Icon icon="ic:baseline-whatsapp" width="20" class="text-white"/></a>
+         </span>
+          <span class="bg-vividOrangeRed w-10 h-10 text-lg flex items-center justify-center rounded-full ml-5">
+           <a href="#"><Icon icon="entypo-social:facebook-with-circle" width="20" class="text-white"/></a>
+         </span>
+          <span class="bg-vividOrangeRed w-10 h-10 text-lg flex items-center justify-center rounded-full ml-5">
+           <a href="#"><Icon icon="mdi:instagram" width="20" class="text-white"/></a>
+         </span>
+        </div>
+      </div>
+      <div class="space-y-4 text-gray-400 mt-4">
+        <div class="flex space-x-4 justify-center items-center">
+          <span>Service</span>
+          <div class="border-l border-gray-400 h-4"></div>
+          <span>Help</span>
+          <div class="border-l border-gray-400 h-4"></div>
+          <span>Contacts</span>
+          <div class="border-l border-gray-400 h-4"></div>
+          <span>Home</span>
+        </div>
+      </div>
+      <p></p>
+    </div>
+    <div class="container mx-auto flex gap-10 text-gray-700 md:hidden">
       <div>
         <h4 class="font-bold mb-4 xl:text-base lg:text-sm">Services</h4>
         <ul class="xl:text-base lg:text-xs">
-          <li><a href="#" class="hover:text-red-500">Pemesanan Alat Panic Button</a></li>
+          <li class="lg:w-52"><a href="#" class="hover:text-red-500">Pemesanan Alat Panic Button</a></li>
           <li class="my-3"><a href="#" class="hover:text-red-500">Kemudahan Akses Pengguna</a></li>
           <li><a href="#" class="hover:text-red-500">Katalog panic Button</a></li>
         </ul>
