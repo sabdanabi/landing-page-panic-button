@@ -36,8 +36,6 @@ import {Icon} from "@iconify/vue";
           <span>Home</span>
         </div>
       </div>
-
-      <p class="text-xs flex justify-center items-center mt-3">&copy; 2024 Can Creative. All Rights Reserved.</p>
     </div>
 
     <div class="container hidden xl:block lg:block ">
@@ -57,9 +55,6 @@ import {Icon} from "@iconify/vue";
             <li><a href="#" class="hover:text-red-500">Home</a></li>
             <li><a href="#" class="hover:text-red-500">About Us</a></li>
           </ul>
-
-          <p>&copy; 2024 Can Creative. All Rights Reserved.</p>
-
         </div>
 
         <div>
@@ -101,6 +96,8 @@ import {Icon} from "@iconify/vue";
         </div>
       </div>
     </div>
+
+    <p class="text-xs flex justify-center items-center mt-6 ">&copy; 2024 Can Creative. All Rights Reserved.</p>
   </footer>
 </template>
 

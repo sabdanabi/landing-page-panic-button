@@ -13,7 +13,7 @@
       </div>
     </div>
 
-    <div class="md:mt-32 lg:mt-32 xl:mt-32 mt-10 md:flex xl:gap-52 lg:gap-10 md:gap-5 relative xl:px-40 lg:px-20">
+    <div class="md:mt-32 lg:mt-32 xl:mt-32 mt-10 md:flex xl:gap-52 2xl:gap-64 lg:gap-10 md:gap-5 relative xl:px-40 lg:px-20">
 
       <div>
         <span class="bg-paradisePink style-number">01</span>
@@ -96,7 +96,7 @@
           </div>
         </div>
 
-        <span class="absolute xl:right-[365px] lg:right-60 top-16 md:right-44 hidden md:block">
+        <span class="absolute xl:right-[365px] 2xl:right-[440px] lg:right-60 top-16 md:right-44 hidden md:block">
           <img src="/assets_image/assets_image_intructios_section/arrow-up-2.png" alt="image-arrow" class="xl:w-44 lg:w-28 md:w-28">
         </span>
 

@@ -50,7 +50,7 @@
     <p class="md:text-4xl xl:text-4xl lg:text-4xl text-xl font-medium">Products</p>
 
     <div class="hidden md:block xl:block lg:block">
-      <div class="flex xl:gap-32 lg:gap-8 md:gap-6 mt-10 ml-10 justify-center items-center">
+      <div class="flex xl:gap-16 lg:gap-8 md:gap-6 mt-10 ml-10 justify-center items-center">
         <div
             v-for="product in products"
             :key="product.id"

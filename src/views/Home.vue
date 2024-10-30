@@ -57,7 +57,7 @@ import { Icon } from "@iconify/vue";
       </div>
 
       <div class="xl:w-96 xl:h-96 md:right-0 md:w-64 md:-top-12 absolute xl:bottom-16 md:block
-      xl:-right-20 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 overflow-hidden w-64 right-0 -top-10 hidden">
+      xl:-right-0 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 overflow-hidden w-64 right-0 -top-10 hidden">
         <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="ml-20" />
       </div>
     </div>

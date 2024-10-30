@@ -71,26 +71,28 @@ const userReviews = [
       </div>
     </div>
 
-    <div class="scroll-container mt-10">
-      <SplideSlide v-for="review in userReviews" :key="review.namaUser">
-        <div class="slide-content md:h-52 lg:h-52 xl:h-52 h-48">
-          <p class="xl:text-base lg:text-sm md:w-96 xl:w-96 lg:w-96 lg:h-24 md:h-24 xl:h-24 w-72 md:text-sm text-xs">{{review.reviewUser}}</p>
-          <div class="flex items-center mt-3">
-            <img class="rounded-full xl:w-12 xl:h-12 lg:w-10 lg:h-10 h-14" :src="review.profileUser" :alt="review.namaUser">
-            <div class="ml-4">
-              <p class="xl:text-base lg:text-sm">{{review.namaUser}}</p>
-              <div class="flex items-center text-yellow-300">
-                <Icon icon="material-symbols:star" />
-                <Icon icon="material-symbols:star" />
-                <Icon icon="material-symbols:star" />
-                <Icon icon="material-symbols:star" />
-                <Icon icon="material-symbols:star" />
-                <p class="ml-1 font-medium text-black">5.0</p>
+    <div class="mt-10 bg-[#e8e8e8] p-5 rounded-lg">
+      <div class="scroll-container rounded-lg">
+        <SplideSlide v-for="review in userReviews" :key="review.namaUser">
+          <div class="slide-content md:h-52 lg:h-52 xl:h-52 h-48">
+            <p class="xl:text-base lg:text-sm md:w-96 xl:w-96 lg:w-96 lg:h-24 md:h-24 xl:h-24 w-72 md:text-sm text-xs">{{review.reviewUser}}</p>
+            <div class="flex items-center mt-3">
+              <img class="rounded-full xl:w-12 xl:h-12 lg:w-10 lg:h-10 h-14" :src="review.profileUser" :alt="review.namaUser">
+              <div class="ml-4">
+                <p class="xl:text-base lg:text-sm">{{review.namaUser}}</p>
+                <div class="flex items-center text-yellow-300">
+                  <Icon icon="material-symbols:star" />
+                  <Icon icon="material-symbols:star" />
+                  <Icon icon="material-symbols:star" />
+                  <Icon icon="material-symbols:star" />
+                  <Icon icon="material-symbols:star" />
+                  <p class="ml-1 font-medium text-black">5.0</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </SplideSlide>
+        </SplideSlide>
+      </div>
     </div>
   </section>
 </template>
