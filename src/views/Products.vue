@@ -1,6 +1,9 @@
 <script setup>
   import { ref, onMounted, onUnmounted } from 'vue';
   import {Icon} from "@iconify/vue";
+  import { Swiper, SwiperSlide } from 'swiper/vue';
+  import 'swiper/swiper-bundle.css';
+
 
   const products = [
     {
@@ -43,24 +46,55 @@
 </script>
 
 <template>
-  <section id="products" class="container xl:px-20 lg:px-20 font-poppins py-24 md:px-12">
-    <p class="text-4xl">Products</p>
-    <div class="flex xl:gap-32 lg:gap-24 md:gap-6 mt-10 ml-10 justify-center ">
-      <div
-          v-for="product in products"
-          :key="product.id"
-          class="bg-white rounded-lg p-5 drop-shadow-2xl"
-      >
-        <img :src="product.img" :alt="product.name" class="w-full h-auto">
-        <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs">{{ product.name }}</p>
-        <button
-            @click="openPopup(product)"
-            class="bg-transparent border-2 border-mediumRed
-            py-2 px-5 text-sm rounded-lg mt-2 md:p-2 md:text-xs"
+  <section id="products" class="container xl:px-20 lg:px-20 font-poppins md:py-24 xl:py-24 lg:py-24 md:px-12 px-10">
+    <p class="md:text-4xl xl:text-4xl lg:text-4xl text-xl font-medium">Products</p>
+
+    <div class="hidden md:block xl:block lg:block">
+      <div class="flex xl:gap-32 lg:gap-24 md:gap-6 mt-10 ml-10 justify-center ">
+        <div
+            v-for="product in products"
+            :key="product.id"
+            class="bg-white rounded-lg p-5 drop-shadow-2xl"
         >
-          Detail Produk
-        </button>
+          <img :src="product.img" :alt="product.name" class="w-full h-auto">
+          <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs">{{ product.name }}</p>
+          <button
+              @click="openPopup(product)"
+              class="bg-transparent border-2 border-mediumRed
+            py-2 px-5 text-sm rounded-lg mt-2 md:p-2 md:text-xs"
+          >
+            Detail Produk
+          </button>
+        </div>
       </div>
+    </div>
+
+    <div class="md:hidden xl:hidden lg:hidden block">
+      <Swiper
+          :slides-per-view="1"
+          :space-between="30"
+          :pagination="{ clickable: true }"
+          :navigation="true"
+          class="mt-10 "
+      >
+        <SwiperSlide
+            v-for="product in products"
+            :key="product.id"
+            class="flex justify-center rounded-lg bg-white"
+        >
+          <div class="w-36 h-64 mx-auto">
+            <img :src="product.img" :alt="product.name" class="w-full h-auto">
+            <p class="xl:text-lg lg:text-lg font-medium md:text-xs text-xs my-3">{{ product.name }}</p>
+            <button
+                @click="openPopup(product)"
+                class="bg-transparent border-2 border-mediumRed text-xs py-1 px-3 rounded-lg mt-2 md:p-2 md:text-xs"
+            >
+              Detail Produk
+            </button>
+          </div>
+        </SwiperSlide>
+      </Swiper>
+
     </div>
 
     <div v-if="showPopup" class="fixed inset-0 bg-black bg-opacity-50 flex
@@ -80,5 +114,11 @@
 </template>
 
 <style scoped>
+.swiper-pagination-bullet {
+  background-color: #cccccc;
+}
 
+.swiper-pagination-bullet-active {
+  background-color: #FF6347;
+}
 </style>

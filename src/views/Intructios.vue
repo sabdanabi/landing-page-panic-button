@@ -7,7 +7,7 @@
     <div class="relative flex justify-center items-center md:mt-20">
       <div class="text-center">
         <p class="xl:text-4xl lg:text-2xl md:text-2xl font-medium">Cara Kerja Panic Button</p>
-        <article class="mt-2 lg:mt-5 xl:mt-5  xl:w-[530px] lg:w-[530px] ml-3 text-mediumGrey text-sm md:w-72 md:text-xs md:mt-2">
+        <article class="mt-2 lg:mt-5 xl:mt-5 xl:w-[530px] lg:w-[530px] ml-3 text-mediumGrey text-sm md:w-72 md:text-xs md:mt-2">
           Aplikasi Tombol Panik adalah sebuah inovasi untuk meningkatkan respons terhadap situasi darurat dan kejahatan.
         </article>
       </div>
