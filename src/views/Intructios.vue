@@ -2,17 +2,19 @@
 </script>
 
 <template>
-  <section id="intructio-section" class="container px-32 md:px-16 font-poppins py-24">
+  <section id="intructio-section" class="container lg:px-32 md:px-16 px-12 xl:px-32 font-poppins py-24">
+
     <div class="relative flex justify-center items-center md:mt-20">
       <div class="text-center">
         <p class="xl:text-4xl lg:text-2xl md:text-2xl font-medium">Cara Kerja Panic Button</p>
-        <article class="mt-5 w-[530px] ml-3 text-mediumGrey text-sm md:w-72 md:text-xs md:mt-2">
+        <article class="mt-2 lg:mt-5 xl:mt-5  xl:w-[530px] lg:w-[530px] ml-3 text-mediumGrey text-sm md:w-72 md:text-xs md:mt-2">
           Aplikasi Tombol Panik adalah sebuah inovasi untuk meningkatkan respons terhadap situasi darurat dan kejahatan.
         </article>
       </div>
     </div>
 
-    <div class="mt-32 md:flex xl:gap-52 lg:gap-10 md:gap-5 relative xl:px-40 lg:px-20">
+    <div class="md:mt-32 lg:mt-32 xl:mt-32 mt-10 md:flex xl:gap-52 lg:gap-10 md:gap-5 relative xl:px-40 lg:px-20">
+
       <div>
         <span class="bg-paradisePink style-number">01</span>
         <p class="xl:mt-10 lg:mt-7 lg:text-base md:text-sm font-semibold md:w-64 md:mt-6 w-72 mt-2">
@@ -52,12 +54,12 @@
       </div>
     </div>
 
-    <div class="mt-28">
+    <div class="md:mt-28 lg:mt-28 xl:mt-28 mt-16">
       <div class="relative flex justify-center items-center">
-        <p class="lg:text-4xl md:text-2xl text-center">Cara Kerja Alat Panic Button</p>
+        <p class="lg:text-4xl md:text-2xl text-center font-medium">Cara Kerja Alat Panic Button</p>
       </div>
 
-      <div class="mt-28 md:flex xl:gap-52 lg:gap-10 relative xl:px-40 lg:px-20">
+      <div class="md:mt-28 xl:mt-28 lg:mt-28 mt-10 md:flex xl:gap-52 lg:gap-10 relative xl:px-40 lg:px-20">
         <div>
           <span class="bg-mediumAquamarine style-number">04</span>
           <p class="mt-2 xl:mt-10 text-lg font-semibold md:text-sm md:w-64 md:mt-6 w-72">

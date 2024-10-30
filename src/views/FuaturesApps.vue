@@ -12,8 +12,8 @@
           to improve response to emergency and crime situations.</article>
       </div>
     </div>
-    <span class="flex justify-center items-center">
-        <img src="/assets_image/mockup_apps/mockup-apps-2.png" alt="image" class="xl:h-auto lg:h-96 md:h-80 w-36">
+    <span class="flex justify-center items-center mt-10">
+        <img src="/assets_image/mockup_apps/mockup-apps-2.png" alt="image" class="xl:h-96 xl:w-52 lg:h-96 md:h-80 w-36">
     </span>
     <div class="md:absolute md:flex xl:gap-96 xl:ml-20 lg:gap-64 lg:left-28 md:gap-52 top-96 md:top-80 md:left-10 mt-5 md:mt-0">
      <div class="">
