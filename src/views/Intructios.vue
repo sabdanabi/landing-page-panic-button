@@ -39,7 +39,7 @@
         </p>
       </div>
 
-      <span class="absolute xl:right-96 lg:right-64 top-10 md:right-36 hidden md:block">
+      <span class="absolute xl:right-60 lg:right-36 top-10 md:right-36 hidden md:block">
         <img src="/assets_image/assets_image_intructios_section/arrow-up-1.png" alt="image-arrow" class="xl:w-60 lg:w-40 md:w-40">
       </span>
 
@@ -84,7 +84,7 @@
           </p>
         </div>
 
-        <span class="absolute xl:right-96 lg:right-64 top-10 md:right-40 hidden md:block">
+        <span class="absolute xl:right-60 lg:right-36 top-10 md:right-40 hidden md:block">
           <img src="/assets_image/assets_image_intructios_section/arrow-up-2.png" alt="image-arrow" class="xl:w-52 lg:w-40 md:w-32">
         </span>
 

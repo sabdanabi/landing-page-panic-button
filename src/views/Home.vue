@@ -22,7 +22,7 @@ import { Icon } from "@iconify/vue";
               <router-link to="/#about">Tentang Panic Button</router-link>
             </button>
             <span class="bg-vividRed xl:py-3 xl:px-5 rounded-full text-white ml-2 md:py-2 md:px-4 px-2 py-1">
-              <Icon icon="formkit:arrowdown" width="16" />
+              <router-link to="/#about"><Icon icon="formkit:arrowdown" width="16" /></router-link>
             </span>
           </div>
 

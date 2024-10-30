@@ -13,9 +13,9 @@
       </div>
     </div>
     <span class="flex justify-center items-center mt-10">
-        <img src="/assets_image/mockup_apps/mockup-apps-2.png" alt="image" class="xl:h-96 xl:w-52 lg:h-96 md:h-80 w-36">
+        <img src="/assets_image/mockup_apps/mockup-apps-2.png" alt="image" class="xl:h-96 xl:w-52 lg:h-72 md:h-72 w-36">
     </span>
-    <div class="md:absolute md:flex xl:gap-96 xl:ml-20 lg:gap-64 lg:left-28 md:gap-52 top-96 md:top-80 md:left-10 mt-5 md:mt-0">
+    <div class="md:absolute md:flex xl:gap-96 xl:ml-20 lg:gap-52 lg:left-28 md:gap-52 top-96 md:top-80 md:left-10 mt-5 md:mt-0">
      <div class="">
        <div>
          <p class="xl:text-lg lg:text-base text-blacc font-medium md:text-sm text-sm">Dapat Memesan Alat Panic Button</p>
