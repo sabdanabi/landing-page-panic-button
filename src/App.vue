@@ -9,11 +9,15 @@
   import FooterComponent from "@/views/Footer.vue";
   import Intructios from "@/views/Intructios.vue";
   import FloatingButton from "@/components/FloatingButton.vue";
+  import HamburgerMenus from "@/components/HamburgerMenus.vue";
 </script>
 
 <template>
-    <div class="hidden md:block">
+    <div class="hidden md:block lg:block xl:block">
       <Navbar/>
+    </div>
+    <div class="block md:hidden lg:hidden xl:hidden">
+      <HamburgerMenus/>
     </div>
 <!--    <FloatingButton/>-->
     <Home/>

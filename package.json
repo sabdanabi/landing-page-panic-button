@@ -11,6 +11,7 @@
   "dependencies": {
     "@iconify/utils": "^2.1.33",
     "@splidejs/vue-splide": "^0.6.12",
+    "element-plus": "^2.8.6",
     "swiper": "^11.1.14",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
@@ -21,6 +22,8 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
+    "unplugin-auto-import": "^0.18.3",
+    "unplugin-vue-components": "^0.27.4",
     "vite": "^5.4.8",
     "vue-concise-slider": "^4.2.5"
   }
