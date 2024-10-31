@@ -44,20 +44,20 @@ import { Icon } from "@iconify/vue";
           <ul class="flex items-center text-center justify-center text-vividRed font-medium gap-24
                xl:mt-28 xl:mb-36 lg:text-sm lg:mt-20 lg:mb-32 md:text-xs md:mt-5 text-xs">
             <li class="flex">
-              <Icon icon="lets-icons:check-fill" width="25" class="mr-2" /> Lorem ipsum dolor sit amet
+              <Icon icon="lets-icons:check-fill" width="25" class="mr-2" /> Alat Mudah digunakan
             </li>
             <li class="flex">
-              <Icon icon="lets-icons:check-fill" width="25" class="mr-2" /> Lorem ipsum dolor sit amet
+              <Icon icon="lets-icons:check-fill" width="25" class="mr-2" /> Apps For User Friendly
             </li>
             <li class="flex">
-              <Icon icon="lets-icons:check-fill" width="25" class="mr-2" /> Lorem ipsum dolor sit amet
+              <Icon icon="lets-icons:check-fill" width="25" class="mr-2" /> Memudahkan Pemesanan Alat
             </li>
           </ul>
         </div>
       </div>
 
-      <div class="xl:w-96 xl:h-96 md:right-0 md:w-64 md:-top-12 absolute xl:bottom-16 md:block
-      xl:-right-0 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 overflow-hidden w-64 right-0 -top-10 hidden">
+      <div class="2xl:w-96 2xl:h-96 xl:w-80 md:right-0 md:w-64 md:-top-12 absolute xl:bottom-16 md:block
+      2xl:-right-0 xl:-right-20 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 overflow-hidden w-64 right-0 -top-10 hidden">
         <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="ml-20" />
       </div>
     </div>

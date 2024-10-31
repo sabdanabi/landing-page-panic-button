@@ -98,14 +98,14 @@
     </div>
 
     <div v-if="showPopup" class="fixed inset-0 bg-black bg-opacity-50 flex
-    items-center justify-center mt-20 md:mr-56 xl:mr-0 lg:mr-0">
-      <div class="bg-white p-8 rounded-lg md:w-[480px] xl:w-[600px] md:h-80 shadow-lg  flex justify-between relative">
+    items-center justify-center mt-20 md:mr-42 xl:mr-0 lg:mr-0 z-50">
+      <div class="bg-white p-8 rounded-lg md:w-[480px] xl:w-[600px] w-72 h-96 md:h-80 shadow-lg  md:flex justify-between relative">
         <button @click="closePopup" class="ml-48 absolute right-6 top-5 text-mediumRed">
           <Icon icon="line-md:close"/></button>
         <img :src="selectedProduct?.img" :alt="selectedProduct?.name"
-             class="xl:w-96 lg:w-44 h-auto md:h-52 md:mt-6 flex justify-center mr-2 items-center md:w-52">
+             class="xl:w-96 lg:w-44 w-20 h-20 md:h-52 md:mt-6 flex justify-center mr-2 items-center md:w-52">
         <div>
-          <h2 class="text-xl mb-2 mt-5 md:text-base font-medium">{{ selectedProduct?.name }}</h2>
+          <h2 class="text-sm mb-2 mt-2 md:text-base font-medium">{{ selectedProduct?.name }}</h2>
           <p class=" text-xs">{{ selectedProduct?.desc }}</p>
         </div>
       </div>
