@@ -6,8 +6,9 @@
   <section id="fuatures" class="xl:px-44 lg:px-20 font-poppins relative px-12">
     <div class="bg-hero-baner-background h-72 relative flex justify-center items-center">
       <div class="text-center ">
-        <p class="xl:text-4xl lg:text-3xl md:text-2xl font-medium">Panic Button App Features</p>
-        <article class=" lg:mt-5 md:mt-2 xl:w-[600px] xl:text-lg ml-3 text-mediumGrey lg:text-base md:text-base md:w-96">
+        <p class="xl:text-4xl lg:text-3xl md:text-2xl font-medium 2xl:text-6xl">Panic Button App Features</p>
+        <article class=" lg:mt-5 md:mt-2 xl:w-[600px] xl:text-lg ml-3 text-mediumGrey
+        lg:text-base md:text-base md:w-96 2xl:text-2xl 2xl:ml-20">
           The Panic Button app is an innovation
           to improve response to emergency and crime situations.</article>
       </div>

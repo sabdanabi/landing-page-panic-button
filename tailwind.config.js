@@ -29,7 +29,9 @@ export default {
     fontFamily: {
       poppins: ['Poppins'],
     },
-
+    // screens: {
+    //   '3xl' : '2560px'
+    // }
   },
   plugins: [],
 }
