@@ -24,14 +24,14 @@ export default {
       },
       backgroundImage: {
         'hero-baner-background': "url('/public/assets_Image/bg-fuature-apps.png')"
+      },
+      screens: {
+        '3xl' : '2560px'
       }
     },
     fontFamily: {
       poppins: ['Poppins'],
     },
-    // screens: {
-    //   '3xl' : '2560px'
-    // }
   },
   plugins: [],
 }

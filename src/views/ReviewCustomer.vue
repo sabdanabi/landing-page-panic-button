@@ -63,15 +63,15 @@ const userReviews = [
   <section id="review" class=" md:px-20 lg:px-20 xl:px-20 px-8 font-poppins pt-16">
     <div class="flex justify-center items-center">
       <div class="text-center">
-        <p class="xl:text-4xl lg:text-3xl md:text-2xl text-base font-medium">Testimoni dari pelanggan</p>
+        <p class="xl:text-4xl lg:text-3xl md:text-2xl text-base font-medium 3xl:text-6xl">Testimoni dari pelanggan</p>
         <article class="lg:mt-5 xl:mt-5 mt-1 lg:w-[500px] xl:w-[500px]
-        xl:text-sm lg:text-xs text-mediumGrey md:mt-2 md:text-sm md:w-72 md:ml-3 text-sm">
+        xl:text-sm lg:text-xs text-mediumGrey md:mt-2 md:text-sm md:w-72 md:ml-3 text-sm 3xl:text-2xl 3xl:w-[800px]">
           Aplikasi Tombol Panik adalah sebuah inovasi untuk meningkatkan respons terhadap situasi darurat dan kejahatan.
         </article>
       </div>
     </div>
 
-    <div class="mt-10 bg-[#e8e8e8] p-5 rounded-lg">
+    <div class="mt-10 bg-[#e8e8e8] p-5 rounded-lg block 3xl:hidden">
       <div class="scroll-container rounded-lg">
         <SplideSlide v-for="review in userReviews" :key="review.namaUser">
           <div class="slide-content md:h-52 lg:h-52 xl:h-52 h-48">

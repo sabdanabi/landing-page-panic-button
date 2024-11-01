@@ -46,22 +46,22 @@
 </script>
 
 <template>
-  <section id="products" class="xl:px-20 lg:px-20 font-poppins md:py-24 xl:py-24 lg:py-24 md:px-12 px-10">
-    <p class="md:text-4xl xl:text-4xl lg:text-4xl text-xl font-medium">Products</p>
+  <section id="products" class="xl:px-20 lg:px-20 font-poppins md:py-24 xl:py-24 lg:py-24 md:px-12 px-10 h-screen">
+    <p class="md:text-4xl xl:text-4xl 3xl:text-6xl lg:text-4xl text-xl font-medium 3xl:mt-10">Products</p>
 
-    <div class="hidden md:block xl:block lg:block">
-      <div class="flex xl:gap-16 lg:gap-8 md:gap-6 mt-10 ml-10 justify-center items-center">
+    <div class="hidden md:block xl:block lg:block 3xl:py-48">
+      <div class="flex xl:gap-16 lg:gap-8 md:gap-6 3xl:gap-28 mt-10 ml-10 justify-center items-center">
         <div
             v-for="product in products"
             :key="product.id"
             class="bg-white rounded-lg p-5 drop-shadow-2xl"
         >
-          <img :src="product.img" :alt="product.name" class="w-full h-auto">
-          <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs">{{ product.name }}</p>
+          <img :src="product.img" :alt="product.name" class="w-full h-auto 3xl:w-[500px]">
+          <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs 3xl:text-3xl">{{ product.name }}</p>
           <button
               @click="openPopup(product)"
               class="bg-transparent border-2 border-mediumRed
-            py-2 px-5 text-sm rounded-lg mt-2 md:p-2 md:text-xs"
+            py-2 px-5 text-sm rounded-lg mt-2 md:p-2 md:text-xs 3xl:text-xl"
           >
             Detail Produk
           </button>
