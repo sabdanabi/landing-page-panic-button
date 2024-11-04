@@ -84,103 +84,36 @@ import {Icon} from "@iconify/vue";
       </div>
     </div>
 
-<!--    <div class="lg:hidden md:block xl:hidden">-->
-<!--      <div class="">-->
-<!--        <div class="flex space-x-4 justify-center items-center ">-->
-<!--         <span class="bg-vividOrangeRed w-10 h-10 text-lg flex items-center justify-center rounded-full ml-5">-->
-<!--           <a href="#"><Icon icon="ic:baseline-whatsapp" width="20" class="text-white"/></a>-->
-<!--         </span>-->
-<!--          <span class="bg-vividOrangeRed w-10 h-10 text-lg flex items-center justify-center rounded-full ml-5">-->
-<!--           <a href="#"><Icon icon="entypo-social:facebook-with-circle" width="20" class="text-white"/></a>-->
-<!--         </span>-->
-<!--          <span class="bg-vividOrangeRed w-10 h-10 text-lg flex items-center justify-center rounded-full ml-5">-->
-<!--           <a href="#"><Icon icon="mdi:instagram" width="20" class="text-white"/></a>-->
-<!--         </span>-->
-<!--        </div>-->
-<!--      </div>-->
-
-<!--      <div class="space-y-4 text-gray-400 mt-4">-->
-<!--        <div class="flex space-x-4 justify-center items-center">-->
-<!--          <div class="flex flex-wrap items-center gap-4">-->
-<!--            <el-dropdown placement="top-start">-->
-<!--              <el-button> Service </el-button>-->
-<!--              <template #dropdown>-->
-<!--                <el-dropdown-menu>-->
-<!--                  <el-dropdown-item>Pemesanan Alat Panic Button</el-dropdown-item>-->
-<!--                  <el-dropdown-item>Kemudahan Akses Pengguna</el-dropdown-item>-->
-<!--                  <el-dropdown-item>Katalog panic Button</el-dropdown-item>-->
-<!--                </el-dropdown-menu>-->
-<!--              </template>-->
-<!--            </el-dropdown>-->
-<!--          </div>-->
-<!--          <div class="border-l border-gray-400 h-4"></div>-->
-<!--          <div class="flex flex-wrap items-center gap-4">-->
-<!--            <el-dropdown placement="top-start">-->
-<!--              <el-button> Help </el-button>-->
-<!--              <template #dropdown>-->
-<!--                <el-dropdown-menu>-->
-<!--                  <el-dropdown-item>Privacy Policy</el-dropdown-item>-->
-<!--                  <el-dropdown-item>Terms of Use</el-dropdown-item>-->
-<!--                </el-dropdown-menu>-->
-<!--              </template>-->
-<!--            </el-dropdown>-->
-<!--          </div>-->
-<!--          <div class="border-l border-gray-400 h-4"></div>-->
-<!--          <div class="flex flex-wrap items-center gap-4">-->
-<!--            <el-dropdown placement="top-start">-->
-<!--              <el-button> Contact </el-button>-->
-<!--              <template #dropdown>-->
-<!--                <el-dropdown-menu>-->
-<!--                  <el-dropdown-item>+39 346 368 5708</el-dropdown-item>-->
-<!--                  <el-dropdown-item>can@gmail.com</el-dropdown-item>-->
-<!--                  <el-dropdown-item>Jl. Sentyaki Raya No.7</el-dropdown-item>-->
-<!--                </el-dropdown-menu>-->
-<!--              </template>-->
-<!--            </el-dropdown>-->
-<!--          </div>-->
-<!--          <div class="border-l border-gray-400 h-4"></div>-->
-<!--          <span>Home</span>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
     <div class="container hidden xl:block lg:block">
-      <div class="mx-auto flex xl:gap-28 lg:gap-10 text-gray-700 container 3xl:gap-64 3xl:mx-20">
+      <div class="mx-auto flex xl:gap-40 lg:gap-16 text-gray-700 container 3xl:gap-80 3xl:mx-20">
         <div>
           <h4 class="font-bold mb-4 xl:text-base lg:text-sm 3xl:text-4xl">Services</h4>
           <ul class="xl:text-base lg:text-xs 3xl:text-2xl">
-            <li class="lg:w-52"><a href="#" class="hover:text-red-500">Pemesanan Alat Panic Button</a></li>
+            <li class="lg:w-52 xl:w-60 3xl:w-96"><a href="#" class="hover:text-red-500">Pemesanan Alat Panic Button</a></li>
             <li class="my-3"><a href="#" class="hover:text-red-500">Kemudahan Akses Pengguna</a></li>
             <li><a href="#" class="hover:text-red-500">Katalog panic Button</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="font-bold mb-4 xl:text-base lg:text-sm 3xl:text-4xl">Home</h4>
-          <ul class="xl:text-base lg:text-xs 3xl:text-xl">
-            <li><a href="#" class="hover:text-red-500">Home</a></li>
-            <li><a href="#" class="hover:text-red-500 mt-2">About</a></li>
-          </ul>
-        </div>
-
-        <div>
           <h4 class="font-bold mb-4 xl:text-base lg:text-sm 3xl:text-4xl">Help</h4>
-          <ul class="xl:text-base lg:text-xs w-28 3xl:text-xl">
-            <li><a href="#" class="hover:text-red-500">Terms of Use</a></li>
-            <li><a href="#" class="hover:text-red-500">Privacy Policy</a></li>
+          <ul class="xl:text-base lg:text-xs w-28 3xl:text-2xl">
+            <li class="lg:w-36 xl:w-48 mb-3 3xl:w-72"><a href="#" class="hover:text-red-500">Ketentuan Penggunaan</a></li>
+            <li class="xl:w-48 3xl:w-60"><a href="#" class="hover:text-red-500">Kebijakan Privasi</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="font-bold mb-4 xl:text-base lg:text-sm 3xl:text-4xl">Contacts</h4>
-          <ul class="xl:text-base lg:text-xs 3xl:text-xl">
-            <li class="flex items-center">
+          <ul class="xl:text-base lg:text-xs 3xl:text-2xl">
+            <li class="flex items-center lg:w-40 xl:w-48 3xl:w-72">
               <span class="mr-2">📍</span>Jl. Sentyaki Raya No.7
             </li>
-            <li class="flex items-center my-2">
-              <span class="mr-2">📞</span>+39 346 368 5708
+            <li class="flex items-center my-3">
+              <span class="mr-2">📞</span>082281182118
             </li>
             <li class="flex items-center">
-              <span class="mr-2">✉️</span>can@gmail.com
+              <span class="mr-2">✉️</span>hallo@can.co.id
             </li>
           </ul>
         </div>
@@ -188,21 +121,24 @@ import {Icon} from "@iconify/vue";
         <div class="">
           <h4 class="font-bold mb-4 ml-5 xl:text-base lg:text-sm 3xl:text-4xl">Social Media</h4>
           <div class="flex space-x-4 ">
-         <span class="bg-vividOrangeRed w-12 h-12 text-lg flex items-center justify-center rounded-full ml-5">
-           <a href="#"><Icon icon="ic:baseline-whatsapp" width="25" height="25" class="text-white"/></a>
+         <span class="bg-vividOrangeRed w-12 h-12 lg:w-8 lg:h-8 xl:w-10 xl:h-10
+         3xl:w-20 3xl:h-20 text-lg flex items-center justify-center rounded-full ml-5">
+           <a href="#"><Icon icon="ic:baseline-whatsapp" class="text-white lg:text-lg xl:text-2xl 3xl:text-5xl"/></a>
          </span>
-            <span class="bg-vividOrangeRed w-12 h-12 text-lg flex items-center justify-center rounded-full ml-5">
-           <a href="#"><Icon icon="entypo-social:facebook-with-circle" width="25" height="25" class="text-white"/></a>
+            <span class="bg-vividOrangeRed w-12 h-12 lg:w-8 lg:h-8 text-lg xl:w-10 xl:h-10 3xl:w-20 3xl:h-20
+            flex items-center justify-center rounded-full ml-5">
+           <a href="#"><Icon icon="entypo-social:facebook-with-circle" class="text-white lg:text-lg xl:text-2xl 3xl:text-5xl"/></a>
          </span>
-            <span class="bg-vividOrangeRed w-12 h-12 text-lg flex items-center justify-center rounded-full ml-5">
-           <a href="#"><Icon icon="mdi:instagram" width="25" height="25" class="text-white"/></a>
+            <span class="bg-vividOrangeRed w-12 h-12 lg:w-8 lg:h-8 text-lg xl:w-10 xl:h-10 3xl:w-20 3xl:h-20
+            flex items-center justify-center rounded-full ml-5">
+           <a href="#"><Icon icon="mdi:instagram" class="text-white lg:text-lg xl:text-2xl 3xl:text-5xl"/></a>
          </span>
           </div>
         </div>
       </div>
     </div>
 
-    <p class="text-xs flex justify-center items-center mt-6 ">&copy; 2024 Can Creative. All Rights Reserved.</p>
+    <p class="text-xs flex justify-center items-center mt-10 3xl:text-xl ">&copy; 2024 Can Creative. All Rights Reserved.</p>
   </footer>
 </template>
 

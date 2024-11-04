@@ -102,15 +102,17 @@
     </div>
 
     <div v-if="showPopup" class="fixed inset-0 bg-black bg-opacity-50 flex
-    items-center justify-center  md:mr-42 xl:mr-0 lg:mr-0 z-[9999]">
-      <div class="bg-white p-8 rounded-lg md:w-[480px] xl:w-[600px] w-72 h-96 md:h-80 shadow-lg  md:flex justify-between relative">
+    items-center justify-center md:mr-42 xl:mr-0 lg:mr-0 z-[9999]">
+      <div class="bg-white p-8 rounded-lg 3xl:w-[1200px] 3xl:h-[600px] md:w-[480px] xl:w-[600px] w-72
+      h-96 md:h-80 shadow-lg md:flex justify-between relative 3xl:pr-28 3xl:py-16">
         <button @click="closePopup" class="ml-48 absolute right-6 top-5 text-mediumRed">
-          <Icon icon="line-md:close"/></button>
+          <Icon icon="line-md:close" class="3xl:text-4xl"/></button>
         <img :src="selectedProduct?.img" :alt="selectedProduct?.name"
-             class="xl:w-96 lg:w-44 w-20 h-20 md:h-52 md:mt-6 flex justify-center mr-2 items-center md:w-52">
+             class="xl:w-96 lg:w-44 w-20 h-20 md:h-52 3xl:w-[500px]
+             3xl:h-[400px] md:mt-6 flex justify-center mr-2 items-center md:w-52 3xl:mr-7">
         <div>
-          <h2 class="text-sm mb-2 mt-2 md:text-base font-medium">{{ selectedProduct?.name }}</h2>
-          <p class=" text-xs">{{ selectedProduct?.desc }}</p>
+          <h2 class="text-sm mb-2 mt-2 md:text-base font-medium 3xl:text-4xl ">{{ selectedProduct?.name }}</h2>
+          <p class=" text-xs 3xl:text-2xl">{{ selectedProduct?.desc }}</p>
         </div>
       </div>
     </div>

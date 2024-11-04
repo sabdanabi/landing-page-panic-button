@@ -28,8 +28,6 @@
     <FuaturesApps/>
     <Intructios/>
     <Products/>
-<!--    <Reviews/>-->
-<!--    <ReviewCustomer/>-->
     <ReviewCard2/>
     <FooterComponent/>
 </template>
