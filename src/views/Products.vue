@@ -9,18 +9,21 @@
     {
       id: 1,
       name: 'Panic Button + GPS',
+      price: 150000,
       desc: 'Panic Button dengan GPS adalah perangkat keamanan inovatif yang dirancang untuk memberikan perlindungan dan rasa aman bagi pengguna dalam situasi darurat. Dengan teknologi pelacakan GPS yang canggih, perangkat ini memastikan bahwa bantuan dapat dengan cepat dan akurat mencapai lokasi pengguna.',
       img: '/assets_image/assest_image_products/panic-button-gps.png'
     },
     {
       id: 2,
       name: 'Panic Button + Kamera',
+      price: 150000,
       desc: 'Panic Button dengan GPS dan Kamera adalah perangkat keamanan canggih yang dirancang untuk memberikan perlindungan dan keamanan optimal bagi pengguna dalam situasi darurat. Dengan teknologi terbaru, perangkat ini tidak hanya memungkinkan pengguna untuk meminta bantuan dengan satu sentuhan, tetapi juga melacak lokasi mereka dan merekam situasi sekitar secara real-time.',
       img: '/assets_image/assest_image_products/panic-button-kamera.png'
     },
     {
       id: 3,
       name: 'Panic Button + Basic',
+      price: 150000,
       desc: 'Panic Button Basic adalah solusi keamanan sederhana namun efektif yang dirancang untuk memberikan rasa aman dan ketenangan bagi pengguna dalam situasi darurat. Dengan desain yang mudah digunakan, perangkat ini memungkinkan pengguna untuk meminta bantuan hanya dengan satu sentuhan.',
       img: '/assets_image/assest_image_products/panic-button-basicc.png'
     }
@@ -58,6 +61,7 @@
         >
           <img :src="product.img" :alt="product.name" class="w-full h-auto 3xl:w-[500px]">
           <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs 3xl:text-3xl">{{ product.name }}</p>
+          <p class="md:text-xs md:text-mediumGrey xl:text-sm 3xl:text-xl">{{ product.price }}/bulan</p>
           <button
               @click="openPopup(product)"
               class="bg-transparent border-2 border-mediumRed
@@ -69,7 +73,7 @@
       </div>
     </div>
 
-    <div class="md:hidden xl:hidden lg:hidden block">
+    <div class="md:hidden xl:hidden lg:hidden block absolute">
       <Swiper
           :slides-per-view="1"
           :space-between="30"
@@ -98,7 +102,7 @@
     </div>
 
     <div v-if="showPopup" class="fixed inset-0 bg-black bg-opacity-50 flex
-    items-center justify-center mt-20 md:mr-42 xl:mr-0 lg:mr-0 z-50">
+    items-center justify-center  md:mr-42 xl:mr-0 lg:mr-0 z-[9999]">
       <div class="bg-white p-8 rounded-lg md:w-[480px] xl:w-[600px] w-72 h-96 md:h-80 shadow-lg  md:flex justify-between relative">
         <button @click="closePopup" class="ml-48 absolute right-6 top-5 text-mediumRed">
           <Icon icon="line-md:close"/></button>

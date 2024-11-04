@@ -10,6 +10,8 @@
   import Intructios from "@/views/Intructios.vue";
   import FloatingButton from "@/components/FloatingButton.vue";
   import HamburgerMenus from "@/components/HamburgerMenus.vue";
+  import Reviews from "@/views/Reviews.vue";
+  import ReviewCard2 from "@/components/ReviewCard2.vue";
 </script>
 
 <template>
@@ -26,7 +28,9 @@
     <FuaturesApps/>
     <Intructios/>
     <Products/>
-    <ReviewCustomer/>
+<!--    <Reviews/>-->
+<!--    <ReviewCustomer/>-->
+    <ReviewCard2/>
     <FooterComponent/>
 </template>
 

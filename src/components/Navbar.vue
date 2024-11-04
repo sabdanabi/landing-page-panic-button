@@ -19,7 +19,7 @@
 
 <template>
       <nav :class="['mx-auto flex justify-between items-center pt-4 font-poppins px-16 z-10'
-    , isScrolled ? 'fixed top-0 left-0 bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg z-[9999]'
+    , isScrolled ? 'fixed top-0 left-0 bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg z-[50]'
     : 'absolute top-0 left-0 bg-transparent mx-auto']">
         <img src="/assets_image/logo-panic-button.png" alt="image-logo"
              class="w-16 mb-2 md:mr-20 3xl:mr-[1067px] xl:mr-[519px] lg:mr-72 2xl:w-20">
