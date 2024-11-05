@@ -46,6 +46,15 @@
   onUnmounted(() => {
     document.body.style.overflow = '';
   });
+
+  function formatRupiah(value) {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0
+    }).format(value);
+  }
+
 </script>
 
 <template>
@@ -61,7 +70,7 @@
         >
           <img :src="product.img" :alt="product.name" class="object-cover w-full h-auto 3xl:w-[500px]">
           <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs 3xl:text-3xl">{{ product.name }}</p>
-          <p class="md:text-xs md:text-mediumGrey xl:text-sm 3xl:text-xl">{{ product.price }}/bulan</p>
+          <p class="md:text-xs md:text-mediumGrey xl:text-sm 3xl:text-2xl 3xl:py-2">{{ formatRupiah(product.price) }}/bulan</p>
           <button
               @click="openPopup(product)"
               class="bg-transparent border-2 border-mediumRed
@@ -88,12 +97,12 @@
       >
         <div class="w-36 h-64 mx-auto">
           <img :src="product.img" :alt="product.name" class="object-cover w-full h-auto" />
-          <p class="xl:text-lg lg:text-lg font-medium md:text-xs text-xs my-3">
-            {{ product.name }}
-          </p>
+          <p class="xl:text-lg lg:text-lg font-medium md:text-xs text-xs mt-3">
+            {{ product.name }}</p>
+          <p class="text-xs text-mediumGrey font-normal xl:text-sm 3xl:text-2xl 3xl:py-2 xs:my-1">{{ formatRupiah(product.price) }}/bulan</p>
           <button
               @click="openPopup(product)"
-              class="bg-transparent border-2 border-mediumRed text-xs py-1 px-3 rounded-lg mt-2 md:p-2 md:text-xs"
+              class="bg-transparent border-2 border-mediumRed text-xs py-1 px-3 rounded-lg md:p-2 md:text-xs"
           >
             Detail Produk
           </button>
@@ -113,6 +122,7 @@
              3xl:h-[400px] md:mt-6 flex justify-center mr-2 items-center md:w-52 3xl:mr-7">
         <div>
           <h2 class="text-sm mb-2 mt-2 md:text-base font-medium 3xl:text-4xl ">{{ selectedProduct?.name }}</h2>
+          <p class="text-xs text-mediumGrey 3xl:text-2xl 3xl:py-2 md:mb-1">{{ formatRupiah(selectedProduct?.price) }}/bulan</p>
           <p class=" text-xs 3xl:text-2xl">{{ selectedProduct?.desc }}</p>
         </div>
       </div>

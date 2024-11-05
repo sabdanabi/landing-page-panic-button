@@ -102,15 +102,15 @@ const splideOptionsRTL = {
     </div>
 
     <div class="wrapper">
-      <Splide :options="splideOptionsLTR" :extensions="{ AutoScroll }">
+
+      <Splide :options="splideOptionsLTR" :extensions="{ AutoScroll }" class="md:hidden lg:block hidden">
         <SplideSlide v-for="(review, index) in repeatedReviews" :key="'left-' + index">
-          <div class="slide-content bg-white shadow-lg rounded-lg p-6 md:w-96 md:h-40 xs:w-60 xs:h-48 my-5 3xl:w-[540px]">
-            <p class="2xl:text-xs mb-4 md:h-16 md:text-xs 3xl:text-lg 3xl:h-28 text-xs xs:h-24">{{ review.reviewUser }}</p>
+          <div class="slide-content rtl-content bg-white shadow-lg rounded-lg p-6 w-96 my-5 3xl:w-[540px]">
+            <p class="2xl:text-xs mb-4 h-16 text-start md:text-xs 3xl:text-lg 3xl:h-28">{{ review.reviewUser }}</p>
             <div class="flex">
-              <img class="rounded-full xl:w-12 xl:h-12 lg:w-10 lg:h-10 md:h-8 3xl:h-20 3xl:w-20 xs:h-7"
-                   :src="review.profileUser" :alt="review.namaUser" />
+              <img class="rounded-full xl:w-12 xl:h-12 lg:w-10 lg:h-10 md:h-8 3xl:h-20 3xl:w-20" :src="review.profileUser" :alt="review.namaUser" />
               <div class="ml-4">
-                <p class="xl:text-base lg:text-sm md:text-xs 3xl:text-lg xs:text-sm">{{ review.namaUser }}</p>
+                <p class="xl:text-base lg:text-sm text-start 3xl:text-lg">{{ review.namaUser }}</p>
                 <div class="flex items-center text-yellow-300">
                   <Icon icon="material-symbols:star" v-for="i in 5" :key="i" class="md:text-xs 3xl:text-base"/>
                   <p class="ml-1 font-medium text-black text-xs 3xl:text-base">5.0</p>

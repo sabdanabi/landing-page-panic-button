@@ -41,6 +41,7 @@ import { Icon } from "@iconify/vue";
               Dipercaya oleh lebih dari 4.000+ Pembeli.</p>
             <p class="text-center text-xs text-lightGray mt-1 3xl:text-xl">Dari 1.250+ ulasan</p>
           </div>
+
           <div class="mt-16 lg:mt-20 3xl:mt-56">
             <ul class="flex items-center justify-center text-center text-vividRed font-medium gap-10
                lg:text-sm md:text-xs text-xs 3xl:text-2xl 3xl:gap-60 2xl:gap-40">
@@ -56,10 +57,10 @@ import { Icon } from "@iconify/vue";
             </ul>
           </div>
       </div>
-<!--      <div class="2xl:w-96 2xl:h-96 xl:w-80 md:right-0 md:w-64 md:-top-12 absolute xl:bottom-16 md:block-->
-<!--      2xl:-right-0 xl:-right-20 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 overflow-hidden w-64 right-0 -top-10 hidden">-->
-<!--        <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="ml-20" />-->
-<!--      </div>-->
+      <div class="2xl:w-96 2xl:h-96  xl:w-80 md:right-0 md:w-64 md:top-16 absolute xl:bottom-16 md:block
+      2xl:-right-0 xl:-right-20 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 3xl:h-[600px] overflow-hidden w-64 right-0 -top-10 hidden">
+        <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="ml-20 object-cover 3xl:h-[600px]" />
+      </div>
     </div>
   </section>
 </template>

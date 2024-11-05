@@ -18,6 +18,6 @@
 }
 
 .style-menus-hamburger {
-    @apply mb-4 text-lg text-gray-700 hover:text-vividOrangeRed font-medium
+    @apply mb-4 text-sm text-gray-700 hover:text-vividOrangeRed font-medium
 }
 
