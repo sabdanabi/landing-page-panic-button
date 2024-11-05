@@ -83,7 +83,7 @@ import {Icon} from "@iconify/vue";
     </div>
 
     <div class="container hidden xl:block md:block">
-      <div class="mx-auto flex md:gap-10 xl:gap-40 lg:gap-16 text-gray-700 3xl:mx-20">
+      <div class="mx-auto flex md:gap-10 xl:gap-40 3xl:gap-72 3xl:mt-6 lg:gap-16 text-gray-700 3xl:mx-20">
         <div>
           <h4 class="font-bold mb-4 xl:text-base lg:text-sm 3xl:text-4xl md:text-base">Services</h4>
           <ul class="xl:text-base lg:text-xs 3xl:text-3xl md:text-sm">
@@ -103,7 +103,7 @@ import {Icon} from "@iconify/vue";
           </ul>
         </div>
 
-        <div class="3xl:ml-44">
+        <div class="3xl:ml-60">
           <h4 class="font-bold mb-4 xl:text-base lg:text-sm 3xl:text-4xl md:text-base">Contacts</h4>
           <ul class="xl:text-base lg:text-xs 3xl:text-3xl md:text-sm">
             <li class="flex items-center 3xl:w-[800px]">
