@@ -57,10 +57,10 @@ import { Icon } from "@iconify/vue";
             </ul>
           </div>
       </div>
-      <div class="2xl:w-96 2xl:h-96  xl:w-80 md:right-0 md:w-64 md:top-16 absolute xl:bottom-16 md:block
-      2xl:-right-0 xl:-right-20 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 3xl:h-[600px] overflow-hidden w-64 right-0 -top-10 hidden">
-        <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="ml-20 object-cover 3xl:h-[600px]" />
-      </div>
+<!--      <div class="2xl:w-96 2xl:h-96  xl:w-80 md:right-0 md:w-64 md:top-16 absolute xl:bottom-16 md:block-->
+<!--      2xl:-right-0 xl:-right-20 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 3xl:h-[600px] overflow-hidden w-64 right-0 -top-10 hidden">-->
+<!--        <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="ml-20 object-cover 3xl:h-[600px]" />-->
+<!--      </div>-->
     </div>
   </section>
 </template>
