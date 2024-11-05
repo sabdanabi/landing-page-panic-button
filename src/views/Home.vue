@@ -13,7 +13,7 @@ import { Icon } from "@iconify/vue";
           </p>
           <article class="xl:text-xl xl:w-[750px] md:text-sm md:w-96
           text-center  text-mediumGrey mt-3 lg:text-base lg:w-[530px]
-          mx-auto text-xs w-80 3xl:text-4xl 3xl:w-[1200px] 3xl:my-6 ">
+          mx-auto text-xs w-80 3xl:text-4xl 3xl:w-[1200px] 3xl:my-6 z-10">
             Aplikasi Tombol Panik adalah sebuah inovasi untuk meningkatkan respons terhadap situasi darurat dan kejahatan.
           </article>
 
@@ -57,10 +57,10 @@ import { Icon } from "@iconify/vue";
             </ul>
           </div>
       </div>
-<!--      <div class="2xl:w-96 2xl:h-96  xl:w-80 md:right-0 md:w-64 md:top-16 absolute xl:bottom-16 md:block-->
-<!--      2xl:-right-0 xl:-right-20 lg:w-64 lg:h-80 lg:bottom-6 lg:right-0 3xl:h-[600px] overflow-hidden w-64 right-0 -top-10 hidden">-->
-<!--        <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="ml-20 object-cover 3xl:h-[600px]" />-->
-<!--      </div>-->
+      <div class="xl:-right-14 3xl:w-[530px] 2xl:w-[430px] 2xl:right-10 md:w-96 xl:w-[400px]
+      md:top-20 md:right-6 absolute md:pl-40 xl:pl-28 3xl:pl-0 overflow-hidden w-64">
+        <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="md:w-36 3xl:w-[490px] xl:w-48 2xl:w-60 ml-20 object-cover" />
+      </div>
     </div>
   </section>
 </template>
