@@ -17,3 +17,7 @@
     @apply md:border md:pl-5 md:py-3 md:rounded-lg md:mt-5 xl:mt-10;
 }
 
+.style-menus-hamburger {
+    @apply mb-4 text-lg text-gray-700 hover:text-vividOrangeRed font-medium
+}
+

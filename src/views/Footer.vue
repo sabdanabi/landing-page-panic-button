@@ -48,21 +48,18 @@ import {Icon} from "@iconify/vue";
       </div>
       <div class="flex gap-6">
         <div>
-          <p class="font-semibold">Tentang</p>
+          <p class="font-semibold">Service</p>
           <ul class="text-xs font-light text-mediumGrey">
-            <li class="mt-2">Lorem ipsum dolor sit</li>
-            <li class="my-2">Lorem ipsum dolor sit</li>
-            <li>Lorem ipsum dolor sit</li>
-            <li class="mt-2">Lorem ipsum dolor sit</li>
+            <li class="mt-2">Pesan alat Panic Button</li>
+            <li class="my-2">Kemudahan akses pengguna</li>
+            <li>Katalog Panic Button</li>
           </ul>
         </div>
         <div>
-          <p class="font-semibold">Kebijakan</p>
+          <p class="font-semibold">Help</p>
           <ul class="text-xs font-light text-mediumGrey">
-            <li class="mt-2">Lorem ipsum dolor sit</li>
-            <li class="my-2">Lorem ipsum dolor sit</li>
-            <li>Lorem ipsum dolor sit</li>
-            <li class="mt-2">Lorem ipsum dolor sit</li>
+            <li class="mt-2">Ketentuan Penggunaan</li>
+            <li class="my-2">Kebijakan Privasi</li>
           </ul>
         </div>
       </div>

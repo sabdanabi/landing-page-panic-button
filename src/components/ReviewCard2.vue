@@ -93,9 +93,9 @@ const splideOptionsRTL = {
   <section id="review" class="px-8 font-poppins pt-16 md:px-20 lg:px-20 xl:px-20">
     <div class="flex justify-center items-center">
       <div class="text-center">
-        <p class="xl:text-4xl lg:text-3xl md:text-2xl text-base font-medium 3xl:text-6xl">Testimoni dari pelanggan</p>
+        <p class="xl:text-4xl lg:text-3xl md:text-2xl text-base font-medium 3xl:text-6xl xs:text-lg">Testimoni dari pelanggan</p>
         <article class="lg:mt-5 xl:mt-5 mt-1 lg:w-[500px] xl:w-[500px] xl:text-sm lg:text-xs
-        text-mediumGrey md:mt-2 md:text-sm md:w-72 md:ml-3 text-sm 3xl:text-2xl 3xl:w-[800px]">
+        text-mediumGrey md:mt-2 md:text-sm md:w-72 md:ml-3 text-sm 3xl:text-2xl 3xl:w-[800px] xs:text-xs">
           Aplikasi Tombol Panik adalah sebuah inovasi untuk meningkatkan respons terhadap situasi darurat dan kejahatan.
         </article>
       </div>
@@ -104,13 +104,13 @@ const splideOptionsRTL = {
     <div class="wrapper">
       <Splide :options="splideOptionsLTR" :extensions="{ AutoScroll }">
         <SplideSlide v-for="(review, index) in repeatedReviews" :key="'left-' + index">
-          <div class="slide-content  bg-white shadow-lg rounded-lg p-6 w-96 my-5 3xl:w-[540px]">
-            <p class="2xl:text-xs mb-4 h-16 md:text-xs 3xl:text-lg 3xl:h-28">{{ review.reviewUser }}</p>
+          <div class="slide-content bg-white shadow-lg rounded-lg p-6 md:w-96 md:h-40 xs:w-60 xs:h-48 my-5 3xl:w-[540px]">
+            <p class="2xl:text-xs mb-4 md:h-16 md:text-xs 3xl:text-lg 3xl:h-28 text-xs xs:h-24">{{ review.reviewUser }}</p>
             <div class="flex">
-              <img class="rounded-full xl:w-12 xl:h-12 lg:w-10 lg:h-10 md:h-8 3xl:h-20 3xl:w-20"
+              <img class="rounded-full xl:w-12 xl:h-12 lg:w-10 lg:h-10 md:h-8 3xl:h-20 3xl:w-20 xs:h-7"
                    :src="review.profileUser" :alt="review.namaUser" />
               <div class="ml-4">
-                <p class="xl:text-base lg:text-sm md:text-xs 3xl:text-lg">{{ review.namaUser }}</p>
+                <p class="xl:text-base lg:text-sm md:text-xs 3xl:text-lg xs:text-sm">{{ review.namaUser }}</p>
                 <div class="flex items-center text-yellow-300">
                   <Icon icon="material-symbols:star" v-for="i in 5" :key="i" class="md:text-xs 3xl:text-base"/>
                   <p class="ml-1 font-medium text-black text-xs 3xl:text-base">5.0</p>
@@ -121,7 +121,7 @@ const splideOptionsRTL = {
         </SplideSlide>
       </Splide>
 
-      <Splide :options="splideOptionsRTL" :extensions="{ AutoScroll }" class="md:hidden lg:block">
+      <Splide :options="splideOptionsRTL" :extensions="{ AutoScroll }" class="md:hidden lg:block hidden">
         <SplideSlide v-for="(review, index) in repeatedReviews" :key="'right-' + index">
           <div class="slide-content rtl-content bg-white shadow-lg rounded-lg p-6 w-96 my-5 3xl:w-[540px]">
             <p class="2xl:text-xs mb-4 h-16 text-start md:text-xs 3xl:text-lg 3xl:h-28">{{ review.reviewUser }}</p>

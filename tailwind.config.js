@@ -26,7 +26,8 @@ export default {
         'hero-baner-background': "url('/public/assets_Image/bg-fuature-apps.png')"
       },
       screens: {
-        '3xl' : '2560px'
+        '3xl' : '2560px',
+        'xs'  : '375px'
       }
     },
     fontFamily: {

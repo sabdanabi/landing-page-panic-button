@@ -6,15 +6,15 @@
   <section id="fuatures" class="xl:px-44 lg:px-20 font-poppins relative px-12">
     <div class="bg-hero-baner-background h-72 relative flex justify-center items-center">
       <div class="text-center ">
-        <p class="xl:text-4xl lg:text-3xl md:text-2xl font-medium 2xl:text-6xl">Panic Button App Features</p>
+        <p class="xl:text-4xl lg:text-3xl md:text-2xl font-medium 2xl:text-6xl xs:text-xl">Panic Button App Features</p>
         <article class=" lg:mt-5 md:mt-2 xl:w-[600px] xl:text-lg ml-3 text-mediumGrey
-        lg:text-base md:text-base md:w-96 2xl:text-2xl 2xl:ml-20">
+        lg:text-base md:text-base md:w-96 2xl:text-2xl 2xl:ml-20 xs:text-xs">
           The Panic Button app is an innovation
           to improve response to emergency and crime situations.</article>
       </div>
     </div>
     <span class="flex justify-center items-center mt-10">
-        <img src="/assets_image/mockup_apps/mockup-apps-2.png" alt="image" class="xl:h-96 xl:w-52 lg:h-72 md:h-72 w-36 3xl:h-[700px] 3xl:w-96 ">
+        <img src="/assets_image/mockup_apps/mockup-apps-2.png" alt="image" class=" object-cover xl:h-96 xl:w-52 lg:h-72 md:h-72 w-36 3xl:h-[700px] 3xl:w-96 ">
     </span>
     <div class="md:absolute md:flex xl:gap-96 xl:ml-20 lg:gap-52 lg:left-28
     md:gap-52 top-96 md:top-80 md:left-10 mt-5 md:mt-0 3xl:ml-96">

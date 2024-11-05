@@ -21,7 +21,7 @@
     <div class="block md:hidden lg:hidden xl:hidden">
       <HamburgerMenus/>
     </div>
-<!--      <FloatingButton/>-->
+  <FloatingButton/>
     <Home/>
     <DisplayApps/>
     <About/>

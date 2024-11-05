@@ -49,7 +49,7 @@
 </script>
 
 <template>
-  <section id="products" class="xl:px-20 lg:px-20 font-poppins md:py-24 xl:py-24 lg:py-24 md:px-12 px-10 h-screen">
+  <section id="products" class="xl:px-20 lg:px-20 font-poppins md:py-24 xl:py-24 lg:py-24 md:px-12 px-10">
     <p class="md:text-4xl xl:text-4xl 3xl:text-6xl lg:text-4xl text-xl font-medium 3xl:mt-10">Products</p>
 
     <div class="hidden md:block xl:block lg:block 3xl:py-48">
@@ -59,7 +59,7 @@
             :key="product.id"
             class="bg-white rounded-lg p-5 drop-shadow-2xl"
         >
-          <img :src="product.img" :alt="product.name" class="w-full h-auto 3xl:w-[500px]">
+          <img :src="product.img" :alt="product.name" class="object-cover w-full h-auto 3xl:w-[500px]">
           <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs 3xl:text-3xl">{{ product.name }}</p>
           <p class="md:text-xs md:text-mediumGrey xl:text-sm 3xl:text-xl">{{ product.price }}/bulan</p>
           <button
@@ -73,42 +73,43 @@
       </div>
     </div>
 
-    <div class="md:hidden xl:hidden lg:hidden block absolute">
+    <div class="md:hidden xl:hidden lg:hidden block">
       <Swiper
           :slides-per-view="1"
           :space-between="30"
           :pagination="{ clickable: true }"
           :navigation="true"
-          class="mt-10 "
+          class="mt-10"
       >
-        <SwiperSlide
-            v-for="product in products"
-            :key="product.id"
-            class="flex justify-center rounded-lg bg-white"
-        >
-          <div class="w-36 h-64 mx-auto">
-            <img :src="product.img" :alt="product.name" class="w-full h-auto">
-            <p class="xl:text-lg lg:text-lg font-medium md:text-xs text-xs my-3">{{ product.name }}</p>
-            <button
-                @click="openPopup(product)"
-                class="bg-transparent border-2 border-mediumRed text-xs py-1 px-3 rounded-lg mt-2 md:p-2 md:text-xs"
-            >
-              Detail Produk
-            </button>
-          </div>
-        </SwiperSlide>
+      <SwiperSlide
+          v-for="product in products"
+          :key="product.id"
+          class="flex justify-center rounded-lg bg-white"
+      >
+        <div class="w-36 h-64 mx-auto">
+          <img :src="product.img" :alt="product.name" class="object-cover w-full h-auto" />
+          <p class="xl:text-lg lg:text-lg font-medium md:text-xs text-xs my-3">
+            {{ product.name }}
+          </p>
+          <button
+              @click="openPopup(product)"
+              class="bg-transparent border-2 border-mediumRed text-xs py-1 px-3 rounded-lg mt-2 md:p-2 md:text-xs"
+          >
+            Detail Produk
+          </button>
+        </div>
+      </SwiperSlide>
       </Swiper>
-
     </div>
 
     <div v-if="showPopup" class="fixed inset-0 bg-black bg-opacity-50 flex
     items-center justify-center md:mr-42 xl:mr-0 lg:mr-0 z-[9999]">
       <div class="bg-white p-8 rounded-lg 3xl:w-[1200px] 3xl:h-[600px] md:w-[480px] xl:w-[600px] w-72
-      h-96 md:h-80 shadow-lg md:flex justify-between relative 3xl:pr-28 3xl:py-16">
+      h-[430px] md:h-80 shadow-lg md:flex justify-between relative 3xl:pr-28 3xl:py-16">
         <button @click="closePopup" class="ml-48 absolute right-6 top-5 text-mediumRed">
           <Icon icon="line-md:close" class="3xl:text-4xl"/></button>
         <img :src="selectedProduct?.img" :alt="selectedProduct?.name"
-             class="xl:w-96 lg:w-44 w-20 h-20 md:h-52 3xl:w-[500px]
+             class="xl:w-96 lg:w-44 w-36 h-28 md:h-40 3xl:w-[500px] object-cover
              3xl:h-[400px] md:mt-6 flex justify-center mr-2 items-center md:w-52 3xl:mr-7">
         <div>
           <h2 class="text-sm mb-2 mt-2 md:text-base font-medium 3xl:text-4xl ">{{ selectedProduct?.name }}</h2>
@@ -120,11 +121,5 @@
 </template>
 
 <style scoped>
-.swiper-pagination-bullet {
-  background-color: #cccccc;
-}
 
-.swiper-pagination-bullet-active {
-  background-color: #FF6347;
-}
 </style>
