@@ -16,7 +16,8 @@ import {Icon} from "@iconify/vue";
           untuk mencari, memilih, dan memesan berbagai jenis Panic Button sesuai kebutuhan.</article>
         <div class="">
           <div class=" md:flex gap-3 xl:mt-20 lg:mt-10 lg:mb-5 3xl:mt-28">
-            <div class="xl:w-48 lg:w-44 3xl:w-64 3xl:mr-5 xs:w-40 my-3">
+
+            <div class="xl:w-48 lg:w-44 3xl:w-64 3xl:mr-5 xs:w-40">
               <a
                   href="https://play.google.com"
                   target="_blank"

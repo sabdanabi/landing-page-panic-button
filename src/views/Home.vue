@@ -5,7 +5,7 @@ import { Icon } from "@iconify/vue";
 
 <template>
   <section id="home" class="font-poppins container mx-auto h-screen">
-    <div class="flex justify-center items-center 3xl:py-72 md:py-40 xs:py-32 lg:py-44 lg:ml-0 relative w-full px-20">
+    <div class="flex justify-center items-center 3xl:py-72 md:py-40 xs:py-48 lg:py-44 lg:ml-0 relative w-full px-20">
         <div>
           <p class="xl:text-6xl lg:text-5xl md:text-3xl md:w-[500px] lg:w-[820px]
           xl:w-[900px] mx-auto text-center font-base w-96 3xl:text-8xl 3xl:w-[1500px] xs:text-lg">

@@ -15,13 +15,13 @@
 </script>
 
 <template>
-    <div class="hidden md:block lg:block xl:block">
-      <Navbar/>
-    </div>
+<!--    <div class="hidden md:block lg:block xl:block">-->
+<!--      <Navbar/>-->
+<!--    </div>-->
     <div class="block md:hidden lg:hidden xl:hidden">
       <HamburgerMenus/>
     </div>
-  <FloatingButton/>
+    <FloatingButton/>
     <Home/>
     <DisplayApps/>
     <About/>
