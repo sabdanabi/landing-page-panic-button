@@ -6,9 +6,9 @@ import { Icon } from "@iconify/vue";
 <template>
   <section id="home" class="font-poppins container mx-auto h-screen">
     <div class="flex justify-center items-center 3xl:py-72 md:py-40 xs:py-48 lg:py-44 lg:ml-0 relative w-full px-20">
-        <div>
+        <div class="relative">
           <p class="xl:text-6xl lg:text-5xl md:text-3xl md:w-[500px] lg:w-[820px]
-          xl:w-[900px] mx-auto text-center font-base w-96 3xl:text-8xl 3xl:w-[1500px] xs:text-lg">
+          xl:w-[900px] mx-auto text-center font-base w-96 xs:w-[350px] 3xl:text-8xl 3xl:w-[1500px] xs:text-lg">
             Tekan sekali, bantuan akan datang. Panic Button Anda!
           </p>
           <article class="xl:text-xl xl:w-[750px] md:text-sm md:w-96
@@ -56,11 +56,12 @@ import { Icon } from "@iconify/vue";
               </li>
             </ul>
           </div>
+
+<!--          <div class="xl:-right-14 3xl:w-[530px] 2xl:w-[430px] 2xl:right-10 md:w-96 xl:w-[400px]-->
+<!--          md:top-20 md:right-6 bg-green-500 md:pl-40 xl:pl-28 3xl:pl-0 overflow-hidden w-64">-->
+<!--            <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="md:w-36 3xl:w-[490px] xl:w-48 2xl:w-60 ml-20 object-cover" />-->
+<!--          </div>-->
       </div>
-<!--      <div class="xl:-right-14 3xl:w-[530px] 2xl:w-[430px] 2xl:right-10 md:w-96 xl:w-[400px]-->
-<!--      md:top-20 md:right-6 bg-green-500 md:pl-40 xl:pl-28 3xl:pl-0 overflow-hidden w-64">-->
-<!--        <img src="/assets_image/logo-blur-panic-button.png" alt="img" class="md:w-36 3xl:w-[490px] xl:w-48 2xl:w-60 ml-20 object-cover" />-->
-<!--      </div>-->
     </div>
   </section>
 </template>

@@ -21,3 +21,6 @@
     @apply mb-4 text-sm text-gray-700 hover:text-vividOrangeRed font-medium
 }
 
+.style-mockup-apps {
+    @apply mt-16 lg:h-96 xl:h-96 md:h-72 h-52 2xl:h-[400px] 3xl:h-[800px]
+}

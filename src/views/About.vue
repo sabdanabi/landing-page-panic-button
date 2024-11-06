@@ -15,48 +15,51 @@ import {Icon} from "@iconify/vue";
           Aplikasi ini memungkinkan pengguna, baik perorangan maupun perusahaan,
           untuk mencari, memilih, dan memesan berbagai jenis Panic Button sesuai kebutuhan.</article>
         <div class="">
-          <div class=" md:flex gap-3 xl:mt-20 lg:mt-10 lg:mb-5 3xl:mt-28">
+          <div class="xs:flex xs:justify-center xs:items-center justify-between gap-10
+          xl:mt-20 lg:mt-10 lg:mb-5 3xl:mt-28 md:mt-3">
+            <div class="md:flex gap-3">
+              <div class="xl:w-48 lg:w-44 3xl:w-64 3xl:mr-5 xs:w-40 xs:my-4 md:my-0">
+                <a
+                    href="https://play.google.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition"
+                >
+                  <Icon icon="ion:logo-google-playstore" class="3xl:text-5xl 2xl:text-2xl"/>
+                  <div class="text-left ml-3">
+                    <p class="text-xs text-gray-600 leading-none 3xl:text-base">GET IT ON</p>
+                    <p class=" xl:text-lg lg:text-base font-semibold text-gray-800 leading-none 3xl:text-2xl">Google Play</p>
+                  </div>
+                </a>
+              </div>
 
-            <div class="xl:w-48 lg:w-44 3xl:w-64 3xl:mr-5 xs:w-40">
-              <a
-                  href="https://play.google.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex items-center px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition"
-              >
-                <Icon icon="ion:logo-google-playstore" class="3xl:text-5xl 2xl:text-2xl"/>
-                <div class="text-left ml-3">
-                  <p class="text-xs text-gray-600 leading-none 3xl:text-base">GET IT ON</p>
-                  <p class=" xl:text-lg lg:text-base font-semibold text-gray-800 leading-none 3xl:text-2xl">Google Play</p>
-                </div>
-              </a>
+              <div class="xl:w-48 lg:w-44 3xl:w-64 xs:w-40">
+                <a
+                    href="https://www.apple.com/id/app-store/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex items-center px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition"
+                >
+                  <Icon icon="ic:baseline-apple" class="3xl:text-5xl 2xl:text-2xl"/>
+                  <div class="text-left ml-3">
+                    <p class="text-xs text-gray-600 leading-none 3xl:text-base">GET IT ON</p>
+                    <p class="xl:text-lg lg:text-base font-semibold text-gray-800 leading-none 3xl:text-2xl">App Store</p>
+                  </div>
+                </a>
+              </div>
             </div>
 
-            <div class="xl:w-48 lg:w-44 3xl:w-64 xs:w-40">
-              <a
-                  href="https://www.apple.com/id/app-store/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="flex items-center px-4 py-2 border border-gray-400 rounded-lg hover:bg-gray-100 transition"
-              >
-                <Icon icon="ic:baseline-apple" class="3xl:text-5xl 2xl:text-2xl"/>
-                <div class="text-left ml-3">
-                  <p class="text-xs text-gray-600 leading-none 3xl:text-base">GET IT ON</p>
-                  <p class="xl:text-lg lg:text-base font-semibold text-gray-800 leading-none 3xl:text-2xl">App Store</p>
-                </div>
-              </a>
+            <div class="block md:hidden">
+              <img src="/assets_image/mockup_apps/mockup-apps-2.png" alt="img"
+                   class=" object-cover h-36">
             </div>
+
           </div>
         </div>
       </div>
       <div class="flex">
         <img src="/assets_image/image-about.png" alt="img"
-             class=" xl:w-[370px] md:w-44 xl:h-auto 3xl:w-[700px] lg:w-72 lg:mt-5 hidden md:block">
-      </div>
-
-      <div class="block md:hidden">
-        <img src="/assets_image/mockup_apps/mockup-apps-2.png" alt="img"
-             class=" object-cover h-36 mt-10 mr-32">
+             class="object-cover xl:w-[370px] md:w-44 xl:h-auto 3xl:w-[700px] lg:w-72 lg:mt-5 hidden md:block">
       </div>
     </div>
   </section>

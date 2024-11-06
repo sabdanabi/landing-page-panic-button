@@ -7,7 +7,7 @@
 
 <template>
 
-  <header class="flex items-center justify-between xs:gap-[330px] px-4 py-3 bg-white shadow-md fixed z-50 ">
+  <header class="flex items-center justify-between w-full px-4 py-3 bg-white shadow-md fixed z-50 ">
 
       <img src="/assets_image/logo-panic-button.png" alt="" class="h-10"/>
 
