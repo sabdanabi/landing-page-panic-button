@@ -1,0 +1,36 @@
+<script setup>
+import FooterComponent from "@/views/Footer.vue";
+import ReviewCard2 from "@/components/ReviewCard2.vue";
+import HamburgerMenus from "@/components/HamburgerMenus.vue";
+import FloatingButton from "@/components/FloatingButton.vue";
+import Navbar from "@/components/Navbar.vue";
+import About from "@/views/About.vue";
+import FuaturesApps from "@/views/FuaturesApps.vue";
+import Products from "@/views/Products.vue";
+import Home from "@/views/Home.vue";
+import DisplayApps from "@/views/DisplayApps.vue";
+import Intructios from "@/views/Intructios.vue";
+
+</script>
+
+<template>
+    <div class="hidden md:block lg:block xl:block">
+      <Navbar/>
+    </div>
+    <div class="block md:hidden lg:hidden xl:hidden">
+      <HamburgerMenus/>
+    </div>
+    <FloatingButton/>
+    <Home/>
+    <DisplayApps/>
+    <About/>
+    <FuaturesApps/>
+    <Intructios/>
+    <Products/>
+    <ReviewCard2/>
+    <FooterComponent/>
+</template>
+
+<style scoped>
+
+</style>

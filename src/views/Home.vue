@@ -1,6 +1,12 @@
 <script setup>
 import { Icon } from "@iconify/vue";
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
+
+const goToPageTest = () => {
+  router.push('/');
+};
 </script>
 
 <template>
@@ -25,6 +31,8 @@ import { Icon } from "@iconify/vue";
             <span class="bg-vividRed xl:py-3 xl:px-5 rounded-full text-white ml-2 md:py-2 md:px-4 px-2 py-1">
               <router-link to="/#about"><Icon icon="formkit:arrowdown" width="16" /></router-link>
             </span>
+            <button @click="goToPageTest">Go to PageTest</button>
+
           </div>
 
           <div class="m-3 ">
@@ -64,6 +72,7 @@ import { Icon } from "@iconify/vue";
       </div>
     </div>
   </section>
+
 </template>
 
 <style scoped>
