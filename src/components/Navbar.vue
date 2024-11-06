@@ -7,6 +7,13 @@
     isScrolled.value = scrollPosition > 50;
   };
 
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   onMounted(() => {
     window.addEventListener("scroll", handleScroll);
   });
@@ -22,20 +29,25 @@
         <img src="/assets_image/logo-panic-button.png" alt="image-logo"
              class="w-16 mb-2 2xl:w-20">
         <div class="flex justify-between items-center 3xl:gap-36 lg:gap-1 md:gap-10 2xl:gap-20">
-          <ul class="flex space-x-9 xl:mr-10 3xl:gap-10 2xl:text-base xl:text-sm 3xl:text-2xl
-          md:text-xs lg:mr-10 text-mediumGrey lg:text-sm">
+          <ul class="flex space-x-9 xl:mr-10 3xl:gap-10 2xl:text-base xl:text-sm 3xl:text-2xl md:text-xs lg:mr-10 text-mediumGrey lg:text-sm">
             <li class="hover:text-mediumRed">
-              <router-link to="/">Home</router-link></li>
+              <a href="/home" @click.prevent="scrollToSection('home')">Home</a>
+            </li>
             <li class="hover:text-mediumRed">
-              <router-link to="/#about">About</router-link></li>
+              <a href="/about" @click.prevent="scrollToSection('about')">About</a>
+            </li>
             <li class="hover:text-mediumRed">
-              <router-link to="/#products">Product</router-link></li>
+              <a href="/products" @click.prevent="scrollToSection('products')">Product</a>
+            </li>
             <li class="hover:text-mediumRed">
-              <router-link to="/#fuatures">Fuatures</router-link></li>
+              <a href="/fuatures" @click.prevent="scrollToSection('fuatures')">Features</a>
+            </li>
             <li class="hover:text-mediumRed">
-              <router-link to="/#review">Review</router-link></li>
+              <a href="/review" @click.prevent="scrollToSection('review')">Review</a>
+            </li>
             <li class="hover:text-mediumRed">
-              <router-link to="/#footer">Contact</router-link></li>
+              <a href="/footer" @click.prevent="scrollToSection('footer')">Contact</a>
+            </li>
           </ul>
           <button class="bg-transparent border-2 border-mediumRed
           xl:py-1 xl:w-40 3xl:w-52 md:w-10 rounded-lg flex justify-center items-center xl:gap-4 md:py-2">

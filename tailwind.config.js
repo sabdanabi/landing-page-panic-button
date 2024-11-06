@@ -12,6 +12,7 @@ export default {
         lightGray: '#B8B8B8',
         vividRed: '#DA1002',
         vividOrangeRed: '#F5122D',
+        smallRed: '#FFE9EC',
         darkGray: '#3b3b3b',
         blacc: '#101828',
         test: '#475467',
