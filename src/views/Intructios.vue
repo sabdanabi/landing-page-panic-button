@@ -112,7 +112,7 @@
             <div class="style-border-intruction">
               <p class="mt-2 xl:mt-0 text-lg font-semibold md:text-sm
               md:w-40 md:mt-0 w-72 3xl:text-3xl 3xl:w-80 xs:text-sm">
-                Review dari Aplikasi
+                Petugas Selesaikan
               </p>
               <p class="style-desc-intruction md:w-36 w-64 3xl:w-[500px]">
                 Petugas selesaikan permintaan.
