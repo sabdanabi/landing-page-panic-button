@@ -118,7 +118,7 @@
         <button @click="closePopup" class="ml-48 absolute right-6 top-5 text-mediumRed">
           <Icon icon="line-md:close" class="3xl:text-4xl"/></button>
         <img :src="selectedProduct?.img" :alt="selectedProduct?.name"
-             class="xl:w-96 lg:w-44 w-36 h-28 md:h-40 3xl:w-[500px] object-cover
+             class="xl:w-96 lg:w-48 w-36 h-28 md:h-40 3xl:w-[500px] object-cover
              3xl:h-[400px] md:mt-6 flex justify-center mr-2 items-center md:w-52 3xl:mr-7">
         <div>
           <h2 class="text-sm mb-2 mt-2 md:text-base font-medium 3xl:text-4xl ">{{ selectedProduct?.name }}</h2>

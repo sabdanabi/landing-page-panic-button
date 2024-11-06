@@ -109,7 +109,7 @@ const splideOptionsRTL = {
       <Splide :options="splideOptionsLTR" :extensions="{ AutoScroll }" class="lg:block">
         <SplideSlide v-for="(review, index) in repeatedReviews" :key="'left-' + index">
           <div class="slide-content rtl-content bg-white shadow-lg rounded-lg p-6 md:w-96 xs:w-64 my-5 3xl:w-[540px]">
-            <p class="2xl:text-xs mb-4 h-16 text-start xs:text-xs 3xl:text-lg 3xl:h-28 xs:h-20">{{ review.reviewUser }}</p>
+            <p class="2xl:text-xs mb-4 h-16 text-start xs:text-xs 3xl:text-lg 3xl:h-28 xs:h-20 md:h-16">{{ review.reviewUser }}</p>
             <div class="flex">
               <img class="rounded-full xl:w-12 xl:h-12 lg:w-10 lg:h-10 xs:h-8 3xl:h-20 3xl:w-20"
                    :src="review.profileUser" :alt="review.namaUser" />

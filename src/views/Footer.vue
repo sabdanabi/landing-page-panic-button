@@ -11,8 +11,8 @@ import {Icon} from "@iconify/vue";
 
     <div class="block md:hidden">
       <p class="font-light text-xs w-64">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Sed do eiusmod tempor incididunt ut labore et dolore magna
+        Aplikasi Tombol Panik adalah aplikasi yang dirancang untuk
+        memfasilitasi pembelian dan pengelolaan alat Panic Button.
       </p>
       <div class="flex">
         <img src="/assets_image/qr.png" alt="qr" class="h-36">

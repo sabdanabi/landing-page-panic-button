@@ -115,7 +115,7 @@
                 Review dari Aplikasi
               </p>
               <p class="style-desc-intruction md:w-36 w-64 3xl:w-[500px]">
-                Setelah petugas selesaikan permintaan, pengguna dapat memberi review dari Aplikasi.
+                Petugas selesaikan permintaan.
               </p>
             </div>
           </div>
