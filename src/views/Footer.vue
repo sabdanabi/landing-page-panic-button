@@ -47,7 +47,7 @@ import {Icon} from "@iconify/vue";
           </div>
         </div>
       </div>
-      <div class="flex gap-6">
+      <div class="flex gap-6 mt-3">
         <div>
           <p class="font-semibold">Service</p>
           <ul class="text-xs font-light text-mediumGrey">
@@ -122,7 +122,7 @@ import {Icon} from "@iconify/vue";
       </div>
     </div>
 
-    <div class="lg:hidden">
+    <div class="lg:hidden xs:hidden md:block">
       <h4 class="font-bold mb-4 xl:text-base lg:text-sm 3xl:text-4xl md:text-base">Help</h4>
       <ul class="xl:text-base lg:text-xs w-28 3xl:text-2xl md:text-sm">
         <li class="lg:w-36 xl:w-48 mb-3 3xl:w-72 md:w-44"><a href="#" class="hover:text-red-500">Ketentuan Penggunaan</a></li>
