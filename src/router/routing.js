@@ -10,6 +10,7 @@ import Footer from "@/views/Footer.vue";
 import LoginPage from "@/pages/LoginPage.vue";
 import RegisterPage from "@/pages/RegisterPage.vue";
 import Sections from "@/pages/Sections.vue";
+import ProfilePage from "@/pages/ProfilePage.vue";
 
 const routes = [
     {
@@ -27,46 +28,11 @@ const routes = [
         name: 'Sections',
         component: Sections,
     },
-    // {
-    //     path: '/',
-    //     name: 'home',
-    //     component: Home,
-    // },
-    // {
-    //     path: '/displayApps',
-    //     name: 'displayApps',
-    //     component: DisplayApps,
-    // },
-    // {
-    //     path: '/about',
-    //     name: 'about',
-    //     component: About,
-    // },
-    // {
-    //     path: '/fuatures',
-    //     name: 'fuatures',
-    //     component: FuaturesApps,
-    // },
-    // {
-    //     path: '/intructios',
-    //     name: 'intructios',
-    //     component: Intructios,
-    // },
-    // {
-    //     path: '/products',
-    //     name: 'products',
-    //     component: Products,
-    // },
-    // {
-    //     path: '/review',
-    //     name: 'review',
-    //     component: ReviewCustomer,
-    // },
-    // {
-    //     path: '/footer',
-    //     name: 'footer',
-    //     component: Footer,
-    // },
+    {
+        path: '/profil',
+        name: 'ProfilePage',
+        component: ProfilePage,
+    },
 ]
 
 

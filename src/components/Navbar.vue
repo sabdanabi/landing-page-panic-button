@@ -49,10 +49,10 @@
               <a href="/footer" @click.prevent="scrollToSection('footer')">Contact</a>
             </li>
           </ul>
-          <button class="bg-transparent border-2 border-mediumRed
-          xl:py-1 xl:w-40 3xl:w-52 md:w-10 rounded-lg flex justify-center items-center xl:gap-4 md:py-2">
-            <img src="/assets_image/playstore-logo.png" alt="image" class="md:w-4 xl:w-5 3xl:w-8 mx-auto xl:mx-0">
-            <a href="https://play.google.com" class="md:text-xs xl:text-base md:hidden xl:block 3xl:text-lg">Get Apps</a>
+          <button class="bg-transparent border-2 border-mediumRed rounded-full flex justify-center items-center xl:gap-4">
+            <router-link to="/profil">
+              <img src="/assets_image/img.png" alt="image" class="md:w-10">
+            </router-link>
           </button>
         </div>
       </nav>

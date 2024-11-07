@@ -13,10 +13,13 @@
     "@splidejs/splide": "^4.1.4",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@splidejs/vue-splide": "^0.6.12",
+    "axios": "^1.7.7",
     "element-plus": "^2.8.6",
+    "pinia": "^2.2.6",
     "swiper": "^11.1.14",
     "vue": "^3.5.12",
-    "vue-router": "^4.4.5"
+    "vue-router": "^4.4.5",
+    "vue-toastification": "^2.0.0-rc.5"
   },
   "devDependencies": {
     "@iconify/vue": "^4.1.2",
