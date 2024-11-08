@@ -1,44 +1,42 @@
 <script setup>
-import {onMounted} from 'vue';
+import { useRouter } from 'vue-router';
 import {useLoginEmailStore} from "@/stores/authStore.js";
-import {useRouter} from 'vue-router';
-import {useToast} from 'vue-toastification';
+
 
 const router = useRouter();
 const authStore = useLoginEmailStore();
-const toast = useToast();
 
 const goToPageTest = () => {
   router.push('/sections');
 };
 
-onMounted(() => {
-  authStore.handleRedirectResult().then(() => {
-    if (authStore.user) {
-      toast.success('Login successful!');
-      goToPageTest();
-    }
-  });
-});
+const onGoogleSignIn = async () => {
+  try {
+    await authStore.loginWithEmail();
+    router.push('/sections');
+  } catch (error) {
+    console.error('Login failed:', error);
+  }
+};
 
 </script>
 
 <template>
+
   <section class="flex items-center justify-center min-h-screen bg-gray-100 font-poppins">
     <div class="w-full flex justify-center max-w-md shadow-lg rounded-lg p-1">
       <div class="w-full max-w-md p-8 bg-gradient-to-b from-smallRed from-1% via-white via-50% rounded-lg">
         <div class="flex justify-center mb-6">
-          <img src="/assets_image/logo-panic-button.png" alt="Logo" class="w-12 h-12"/>
+          <img src="/assets_image/logo-panic-button.png" alt="Logo" class="w-12 h-12" />
         </div>
         <h2 class="text-2xl font-semibold text-center text-gray-800">Welcome back</h2>
         <p class="mt-2 text-sm text-center text-gray-600">Please enter your details to sign in</p>
 
         <div class="flex justify-between mt-6 space-x-3">
-          <button @click="authStore.loginWithEmail" :disabled="authStore.loading"
-                  class="flex w-full justify-center gap-3 items-center py-2
+          <button @click="onGoogleSignIn" :disabled="authStore.loading"
+              class="flex w-full justify-center gap-3 items-center py-2
           bg-white drop-shadow text-sm font-medium text-gray-800 rounded-lg hover:bg-gray-300">
-            <img src="/assets_image/google-icon.png" alt="google" class="h-5">
-            <span>{{ authStore.loading ? 'Logging in...' : 'Sign in with Google' }}</span>
+            <img src="/assets_image/google-icon.png" alt="google" class="h-5"> <span>{{ authStore.loading ? 'Logging in...' : 'Sign in with Google' }}</span>
           </button>
         </div>
 
@@ -48,7 +46,7 @@ onMounted(() => {
           <span class="flex-grow border-t border-gray-300"></span>
         </div>
 
-        <form @submit.prevent="goToPageTest">
+        <form @submit.prevent="handleSubmit">
           <div class="mb-4">
             <label class="block text-sm font-medium text-gray-700">No.Hp</label>
             <input
@@ -61,20 +59,18 @@ onMounted(() => {
 
           <div class="flex items-center justify-between mb-4">
             <label class="flex items-center">
-              <input type="checkbox" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500"/>
+              <input type="checkbox" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />
               <span class="ml-2 text-sm text-gray-600">Remember for 30 days</span>
             </label>
           </div>
 
-          <button type="submit"
-                  class="w-full py-3 text-sm font-medium text-white bg-vividOrangeRed rounded-lg hover:bg-vividRed">
+          <button @click="goToPageTest" class="w-full py-3 text-sm font-medium text-white bg-vividOrangeRed rounded-lg hover:bg-vividRed">
             Login
           </button>
         </form>
 
         <p class="mt-4 text-sm text-center text-gray-600">
-          Don't have an account?
-          <router-link to="/register" class="text-indigo-600 hover:underline">Register</router-link>
+          Don't have an account?  <router-link to="/register" class="text-indigo-600 hover:underline">Register</router-link>
         </p>
 
       </div>
@@ -83,5 +79,5 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* Style tambahan jika diperlukan */
+
 </style>

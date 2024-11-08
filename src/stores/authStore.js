@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { useToast } from 'vue-toastification';
 import axios from 'axios'
-import { auth, provider, signInWithRedirect, getRedirectResult  } from "@/firebase/firebase.js";
+import { auth, provider, signInWithPopup } from "@/firebase/firebase.js";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -57,47 +57,36 @@ export const useLoginEmailStore = defineStore('auth', {
             this.error = null;
 
             try {
-                await signInWithRedirect(auth, provider);
+                const result = await signInWithPopup(auth, provider);
+                const user = result.user;
+
+                const firebase_id = user.uid;
+                const email = user.email;
+                const tokenId = await user.getIdToken();
+
+                const response = await axios.post(
+                    `${baseURL}/auth/login/email`,
+                    new URLSearchParams({
+                        email: email,
+                        firebase_id: firebase_id,
+                        token_id: tokenId,
+                    })
+                );
+
+                if (response.data.success) {
+                    this.user = response.data.data.user;
+                    this.refreshToken = response.data.data.refreshToken;
+                    this.success = response.data.message;
+                    toast.success(this.success);
+                } else {
+                    this.error = response.data.message || 'Login failed';
+                    toast.error(this.error);
+                }
             } catch (error) {
-                this.error = error.message || 'An error occurred during Firebase Sign-In';
+                this.error = error.response?.data?.message || 'An error occurred during Firebase Sign-In';
                 toast.error(this.error);
             } finally {
                 this.loading = false;
-            }
-        },
-
-        async handleRedirectResult() {
-            const toast = useToast();
-            try {
-                const result = await getRedirectResult(auth);
-                if (result) {
-                    const user = result.user;
-                    const firebase_id = user.uid;
-                    const email = user.email;
-                    const tokenId = await user.getIdToken();
-
-                    const response = await axios.post(
-                        `${baseURL}/auth/login/email`,
-                        new URLSearchParams({
-                            email: email,
-                            firebase_id: firebase_id,
-                            token_id: tokenId,
-                        })
-                    );
-
-                    if (response.data.success) {
-                        this.user = response.data.data.user;
-                        this.refreshToken = response.data.data.refreshToken;
-                        this.success = response.data.message;
-                        toast.success(this.success);
-                    } else {
-                        this.error = response.data.message || 'Login failed';
-                        toast.error(this.error);
-                    }
-                }
-            } catch (error) {
-                this.error = error.message || 'An error occurred during Firebase Redirect Sign-In';
-                toast.error(this.error);
             }
         },
     },
