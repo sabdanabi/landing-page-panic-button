@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { useToast } from 'vue-toastification';
 import axios from 'axios'
-import { googleOneTap } from 'vue3-google-login';
+import { auth, provider, signInWithRedirect, getRedirectResult  } from "@/firebase/firebase.js";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -14,13 +14,14 @@ export const useRegisterStore = defineStore('auth', {
     }),
 
     actions: {
-        async register(userData) {
+        async register(data) {
             const toast = useToast();
             this.loading = true;
+            this.success = null;
             this.error = null;
 
             try {
-                const response = await axios.post(`${baseURL}/auth/register`, userData);
+                const response = await axios.post(`${baseURL}/auth/register`, data);
 
                 if (response.data.success) {
                     this.user = response.data.data.user;
@@ -30,18 +31,17 @@ export const useRegisterStore = defineStore('auth', {
                     this.error = response.data.message || 'Registrasi gagal';
                     toast.error(this.error);
                 }
-
             } catch (error) {
-                this.error = error.response?.data?.message || 'Terjadi kesalahan saat registrasi';
+                this.error = error.response?.data?.message || 'Terjadi kesalahan selama registrasi';
                 toast.error(this.error);
             } finally {
                 this.loading = false;
             }
-        }
-    }
+        },
+    },
 });
 
-export const useLoginEmailStore = defineStore('auth',{
+export const useLoginEmailStore = defineStore('auth', {
     state: () => ({
         loading: false,
         user: null,
@@ -57,35 +57,48 @@ export const useLoginEmailStore = defineStore('auth',{
             this.error = null;
 
             try {
-                const googleUser = await googleOneTap();
-                const email = googleUser.email;
-                const firebase_id = googleUser.sub;
-
-                const response = await axios.post(
-                    `${baseURL}/auth/login/email`,
-                    new URLSearchParams({
-                        email: email,
-                        firebase_id: firebase_id,
-                    }),
-                );
-
-                if (response.data.success) {
-                    this.user = response.data.data.user;
-                    this.refreshToken = response.data.data.refreshToken;
-                    this.success = response.data.message;
-                    toast.success(this.message);
-                } else {
-                    this.error = response.data.message || 'Login failed';
-                    toast.error(this.error);
-                }``
-
+                await signInWithRedirect(auth, provider);
             } catch (error) {
-                this.error = error.response?.data?.message || 'An error occurred during Google Sign-In';
+                this.error = error.message || 'An error occurred during Firebase Sign-In';
                 toast.error(this.error);
             } finally {
                 this.loading = false;
             }
-        }
-    }
+        },
 
+        async handleRedirectResult() {
+            const toast = useToast();
+            try {
+                const result = await getRedirectResult(auth);
+                if (result) {
+                    const user = result.user;
+                    const firebase_id = user.uid;
+                    const email = user.email;
+                    const tokenId = await user.getIdToken();
+
+                    const response = await axios.post(
+                        `${baseURL}/auth/login/email`,
+                        new URLSearchParams({
+                            email: email,
+                            firebase_id: firebase_id,
+                            token_id: tokenId,
+                        })
+                    );
+
+                    if (response.data.success) {
+                        this.user = response.data.data.user;
+                        this.refreshToken = response.data.data.refreshToken;
+                        this.success = response.data.message;
+                        toast.success(this.success);
+                    } else {
+                        this.error = response.data.message || 'Login failed';
+                        toast.error(this.error);
+                    }
+                }
+            } catch (error) {
+                this.error = error.message || 'An error occurred during Firebase Redirect Sign-In';
+                toast.error(this.error);
+            }
+        },
+    },
 });

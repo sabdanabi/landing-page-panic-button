@@ -14,7 +14,7 @@ import ProfilePage from "@/pages/ProfilePage.vue";
 
 const routes = [
     {
-        path: '/',
+        path: '/login',
         name: 'LoginPage',
         component: LoginPage,
     },
@@ -24,7 +24,7 @@ const routes = [
         component: RegisterPage,
     },
     {
-        path: '/sections',
+        path: '/',
         name: 'Sections',
         component: Sections,
     },
