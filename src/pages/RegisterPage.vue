@@ -1,45 +1,50 @@
 <script setup>
-  import { ref, watch, getCurrentInstance } from 'vue'
-  import {useAuthStore} from "@/stores/authStore.js";
-  import { useRouter } from 'vue-router';
-  import { ElLoading } from 'element-plus';
+import { ref, watch, getCurrentInstance } from 'vue'
+import { useRegisterStore } from "@/stores/authStore.js";
+import { useRouter } from 'vue-router';
+import { ElLoading } from 'element-plus';
 
-  const authStore = useAuthStore();
-  const router = useRouter();
+const authStore = useRegisterStore();
+const router = useRouter();
 
+const form = ref({
+  name: '',
+  email: '',
+  phone: '',
+});
 
-  const form = ref({
-    name: '',
-    email: '',
-    phone: '',
+const { proxy } = getCurrentInstance();
+
+const onRegister = async () => {
+  const loading = ElLoading.service({
+    target: proxy.$refs.formContainer,
+    lock: true,
+    text: 'Loading...',
+    background: 'rgba(255, 255, 255, 0.7)',
   });
 
-  const { proxy } = getCurrentInstance();
-  const onRegister = async  () => {
-
-    const loading = ElLoading.service({
-      target: proxy.$refs.formContainer,
-      lock: true,
-      text: 'Loading...',
-      background: 'rgba(255, 255, 255, 0.7)',
-    });
-
+  try {
     await authStore.register(form.value);
-
+    router.push('/');
+  } catch (error) {
+    console.error('Registrasi gagal:', error);
+  } finally {
     loading.close();
-  };
+  }
+};
 
-  watch(() => authStore.success, (newValue) => {
-    if (newValue) {
-      form.value = {
-        name: '',
-        email: '',
-        phone: '',
-      };
-    }
-  });
+watch(() => authStore.success, (newValue) => {
+  if (newValue) {
+    form.value = {
+      name: '',
+      email: '',
+      phone: '',
+    };
+  }
+});
 
 </script>
+
 
 <template>
   <section ref="formContainer" class="flex items-center justify-center min-h-screen bg-gray-100 font-poppins">

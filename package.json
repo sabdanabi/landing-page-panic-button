@@ -19,7 +19,8 @@
     "swiper": "^11.1.14",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5",
-    "vue-toastification": "^2.0.0-rc.5"
+    "vue-toastification": "^2.0.0-rc.5",
+    "vue3-google-login": "^2.0.33"
   },
   "devDependencies": {
     "@iconify/vue": "^4.1.2",

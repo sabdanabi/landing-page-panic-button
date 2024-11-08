@@ -1,11 +1,17 @@
-
 <script setup>
 import { useRouter } from 'vue-router';
+import {useLoginEmailStore} from "@/stores/authStore.js";
+
 
 const router = useRouter();
+const authStore = useLoginEmailStore();
 
 const goToPageTest = () => {
   router.push('/sections');
+};
+
+const onGoogleSignIn = () => {
+  authStore.loginWithEmail();
 };
 
 </script>
@@ -22,9 +28,10 @@ const goToPageTest = () => {
         <p class="mt-2 text-sm text-center text-gray-600">Please enter your details to sign in</p>
 
         <div class="flex justify-between mt-6 space-x-3">
-          <button class="flex w-full justify-center gap-3 items-center py-2
+          <button @click="onGoogleSignIn" :disabled="authStore.loading"
+              class="flex w-full justify-center gap-3 items-center py-2
           bg-white drop-shadow text-sm font-medium text-gray-800 rounded-lg hover:bg-gray-300">
-            <img src="/assets_image/google-icon.png" alt="google" class="h-5"> <span>Google</span>
+            <img src="/assets_image/google-icon.png" alt="google" class="h-5"> <span>{{ authStore.loading ? 'Logging in...' : 'Sign in with Google' }}</span>
           </button>
         </div>
 
