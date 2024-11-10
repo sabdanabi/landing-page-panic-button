@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
 import { useToast } from 'vue-toastification';
 import axios from 'axios'
-import { auth, provider, signInWithPopup } from "@/firebase/firebase.js";
+import {auth, getRedirectResult, provider, signInWithRedirect} from "@/firebase/firebase.js";
+import router from "@/router/routing.js";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -45,8 +46,6 @@ export const useLoginEmailStore = defineStore('auth', {
     state: () => ({
         loading: false,
         user: null,
-        refreshToken: null,
-        success: null,
         error: null,
     }),
 
@@ -54,40 +53,34 @@ export const useLoginEmailStore = defineStore('auth', {
         async loginWithEmail() {
             const toast = useToast();
             this.loading = true;
-            this.error = null;
 
             try {
-                const result = await signInWithPopup(auth, provider);
-                const user = result.user;
-
-                const firebase_id = user.uid;
-                const email = user.email;
-                const tokenId = await user.getIdToken();
-
-                const response = await axios.post(
-                    `${baseURL}/auth/login/email`,
-                    new URLSearchParams({
-                        email: email,
-                        firebase_id: firebase_id,
-                        token_id: tokenId,
-                    })
-                );
-
-                if (response.data.success) {
-                    this.user = response.data.data.user;
-                    this.refreshToken = response.data.data.refreshToken;
-                    this.success = response.data.message;
-                    toast.success(this.success);
-                } else {
-                    this.error = response.data.message || 'Login failed';
-                    toast.error(this.error);
-                }
+                await signInWithRedirect(auth, provider);
             } catch (error) {
-                this.error = error.response?.data?.message || 'An error occurred during Firebase Sign-In';
+                this.error = "Terjadi kesalahan selama login.";
                 toast.error(this.error);
             } finally {
                 this.loading = false;
             }
         },
+
+        async handleRedirectResult() {
+            const toast = useToast();
+            this.loading = true;
+
+            try {
+                const result = await getRedirectResult(auth);
+                if (result) {
+                    this.user = result.user; // Menyimpan informasi user
+                    toast.success("Login berhasil!");
+                    router.push('/sections'); // Redirect setelah login berhasil
+                }
+            } catch (error) {
+                this.error = "Terjadi kesalahan saat mengelola hasil redirect.";
+                toast.error(this.error);
+            } finally {
+                this.loading = false;
+            }
+        }
     },
 });
