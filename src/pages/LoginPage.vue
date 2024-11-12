@@ -1,7 +1,7 @@
 <script setup>
 import { useRouter } from 'vue-router';
-import {useLoginEmailStore} from "@/stores/authStore.js";
-
+import { useLoginEmailStore } from "@/stores/authStore.js";
+import { onMounted } from 'vue';
 
 const router = useRouter();
 const authStore = useLoginEmailStore();
@@ -13,12 +13,21 @@ const goToPageTest = () => {
 const onGoogleSignIn = async () => {
   try {
     await authStore.loginWithEmail();
-    router.push('/sections');
+    if (authStore.user) {
+      router.push('/sections');
+    } else {
+      console.error('Login failed: No user found.');
+    }
   } catch (error) {
     console.error('Login failed:', error);
   }
 };
 
+onMounted(() => {
+  if (authStore.user) {
+    router.push('/sections');
+  }
+});
 </script>
 
 <template>
@@ -46,28 +55,28 @@ const onGoogleSignIn = async () => {
           <span class="flex-grow border-t border-gray-300"></span>
         </div>
 
-        <form @submit.prevent="handleSubmit">
-          <div class="mb-4">
-            <label class="block text-sm font-medium text-gray-700">No.Hp</label>
-            <input
-                type="email"
-                class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lightGray"
-                placeholder="Masukan No.Hp"
-                v-model="email"
-            />
-          </div>
+<!--        <form @submit.prevent="handleSubmit">-->
+<!--          <div class="mb-4">-->
+<!--            <label class="block text-sm font-medium text-gray-700">No.Hp</label>-->
+<!--            <input-->
+<!--                type="email"-->
+<!--                class="w-full px-3 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-lightGray"-->
+<!--                placeholder="Masukan No.Hp"-->
+<!--                v-model="email"-->
+<!--            />-->
+<!--          </div>-->
 
-          <div class="flex items-center justify-between mb-4">
-            <label class="flex items-center">
-              <input type="checkbox" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />
-              <span class="ml-2 text-sm text-gray-600">Remember for 30 days</span>
-            </label>
-          </div>
+<!--          <div class="flex items-center justify-between mb-4">-->
+<!--            <label class="flex items-center">-->
+<!--              <input type="checkbox" class="w-4 h-4 text-indigo-600 border-gray-300 rounded focus:ring-indigo-500" />-->
+<!--              <span class="ml-2 text-sm text-gray-600">Remember for 30 days</span>-->
+<!--            </label>-->
+<!--          </div>-->
 
-          <button @click="goToPageTest" class="w-full py-3 text-sm font-medium text-white bg-vividOrangeRed rounded-lg hover:bg-vividRed">
-            Login
-          </button>
-        </form>
+<!--          <button @click="goToPageTest" class="w-full py-3 text-sm font-medium text-white bg-vividOrangeRed rounded-lg hover:bg-vividRed">-->
+<!--            Login-->
+<!--          </button>-->
+<!--        </form>-->
 
         <p class="mt-4 text-sm text-center text-gray-600">
           Don't have an account?  <router-link to="/register" class="text-indigo-600 hover:underline">Register</router-link>
