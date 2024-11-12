@@ -53,6 +53,7 @@ export const useLoginEmailStore = defineStore('auth', {
         async loginWithEmail() {
             const toast = useToast();
             this.loading = true;
+            this.error = null;
 
             try {
                 await signInWithRedirect(auth, provider);
@@ -71,9 +72,26 @@ export const useLoginEmailStore = defineStore('auth', {
             try {
                 const result = await getRedirectResult(auth);
                 if (result) {
-                    this.user = result.user; // Menyimpan informasi user
-                    toast.success("Login berhasil!");
-                    router.push('/sections'); // Redirect setelah login berhasil
+                    const user = result.user;
+                    this.user = user;
+                    const firebase_id = user.uid;
+                    console.log(firebase_id)
+                    const email = user.email;
+                    console.log(email)
+                    const response = await axios.post(
+                        `${baseURL}/auth/login/email`,
+                        {
+                            email: email,
+                        }
+                    );
+
+                    if (response.data.success) {
+                        toast.success("Login berhasil!");
+                        router.push('/sections');
+                    } else {
+                        this.error = response.data.message || "Login gagal";
+                        toast.error(this.error);
+                    }
                 }
             } catch (error) {
                 this.error = "Terjadi kesalahan saat mengelola hasil redirect.";
