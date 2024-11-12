@@ -1,7 +1,7 @@
 <script setup>
-import { onMounted } from 'vue';
 import { useRouter } from 'vue-router';
-import { useLoginEmailStore } from '@/stores/authStore';
+import {useLoginEmailStore} from "@/stores/authStore.js";
+
 
 const router = useRouter();
 const authStore = useLoginEmailStore();
@@ -13,19 +13,13 @@ const goToPageTest = () => {
 const onGoogleSignIn = async () => {
   try {
     await authStore.loginWithEmail();
+    router.push('/sections');
   } catch (error) {
     console.error('Login failed:', error);
   }
 };
 
-onMounted(async () => {
-  await authStore.handleRedirectResult(router);
-  if (authStore.user) {
-    router.push('/sections');
-  }
-});
 </script>
-
 
 <template>
 
@@ -42,8 +36,7 @@ onMounted(async () => {
           <button @click="onGoogleSignIn" :disabled="authStore.loading"
               class="flex w-full justify-center gap-3 items-center py-2
           bg-white drop-shadow text-sm font-medium text-gray-800 rounded-lg hover:bg-gray-300">
-            <img src="/assets_image/google-icon.png" alt="google" class="h-5"> <span>
-             {{ authStore.loading ? 'Logging in...' : 'Sign in with Google' }}</span>
+            <img src="/assets_image/google-icon.png" alt="google" class="h-5"> <span>{{ authStore.loading ? 'Logging in...' : 'Sign in with Google' }}</span>
           </button>
         </div>
 
