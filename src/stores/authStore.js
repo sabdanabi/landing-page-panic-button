@@ -62,22 +62,21 @@ export const useLoginEmailStore = defineStore('auth', {
 
                 const email = user.email;
                 const firebase_id = user.uid;
-
                 console.log("Email yang dikirimkan:", email);
                 console.log("firebase_id yang dikirimkan:", firebase_id);
 
                 const formData = new URLSearchParams();
                 formData.append('email', email);
-                // formData.append('firebase_id', firebase_id);
+                formData.append('firebase_id', firebase_id);
 
                 const response = await axios.post(
                     'https://api-panicbutton.can.co.id/v1/auth/login/email',
                     formData,
-                    // {
-                    //     headers: {
-                    //         'Content-Type': 'application/x-www-form-urlencoded',
-                    //     },
-                    // }
+                    {
+                        headers: {
+                            'Content-Type': 'application/x-www-form-urlencoded',
+                        },
+                    }
                 );
 
                 if (response.data.success) {
