@@ -1,8 +1,9 @@
 <script setup>
-  import { ref, onUnmounted,  } from 'vue';
+  import { ref, onUnmounted, onMounted  } from 'vue';
   import {Icon} from "@iconify/vue";
   import { Swiper, SwiperSlide } from 'swiper/vue';
   import 'swiper/swiper-bundle.css';
+  import {usePanicButtonStore} from "@/stores/panicButtonTypeStore.js";
 
 
   const products = [
@@ -31,6 +32,9 @@
 
   const showPopup = ref(false);
   const selectedProduct = ref(null);
+
+  const panicButtonStore = usePanicButtonStore();
+  panicButtonStore.fetchPanicButtonTypes();
 
   const openPopup = (product) => {
     selectedProduct.value = product;
@@ -63,21 +67,21 @@
 
     <div class="hidden md:block xl:block lg:block 3xl:py-48">
       <div class="flex xl:gap-16 lg:gap-8 md:gap-6 3xl:gap-28 mt-10 ml-10 justify-center items-center">
+
         <div
-            v-for="product in products"
-            :key="product.id"
+            v-for="(item) in panicButtonStore.panicButtonTypes" :key="item.id"
             class="bg-white rounded-lg p-5 drop-shadow-2xl"
         >
-          <img :src="product.img" :alt="product.name" class="object-cover w-full h-auto 3xl:w-[500px]">
-          <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs 3xl:text-3xl">{{ product.name }}</p>
-          <p class="md:text-xs md:text-mediumGrey xl:text-sm 3xl:text-2xl 3xl:py-2">{{ formatRupiah(product.price) }}/bulan</p>
-          <button
-              @click="openPopup(product)"
-              class="bg-transparent border-2 border-mediumRed
-            py-2 px-5 text-sm rounded-lg mt-2 md:p-2 md:text-xs 3xl:text-xl"
-          >
-            Detail Produk
-          </button>
+          <img :src="`https://api-panicbutton.can.co.id/${item.image}`" alt="Panic Button Image" class="object-cover w-full h-auto 3xl:w-[500px]">
+          <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs 3xl:text-3xl">{{ item.name }}</p>
+          <p class="md:text-xs md:text-mediumGrey xl:text-sm 3xl:text-2xl 3xl:py-2">{{ item.subscription_price }}/bulan</p>
+<!--          <button-->
+<!--              @click="openPopup(product)"-->
+<!--              class="bg-transparent border-2 border-mediumRed-->
+<!--            py-2 px-5 text-sm rounded-lg mt-2 md:p-2 md:text-xs 3xl:text-xl"-->
+<!--          >-->
+<!--            Detail Produk-->
+<!--          </button>-->
         </div>
       </div>
     </div>
