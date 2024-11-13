@@ -28,6 +28,7 @@ onMounted(() => {
     router.push('/sections');
   }
 });
+
 </script>
 
 <template>

@@ -19,7 +19,7 @@ const routes = [
         path: '/sections',
         name: 'Sections',
         component: Sections,
-
+        meta: { requiresAuth: true },
     },
     {
         path: '/profil',
@@ -27,7 +27,6 @@ const routes = [
         component: ProfilePage,
     },
 ]
-
 
 const router = createRouter({
     history: createWebHistory(),
