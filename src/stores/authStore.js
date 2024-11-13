@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia'
 import { useToast } from 'vue-toastification';
 import axios from 'axios'
-import { auth, provider, signInWithPopup } from "@/firebase/firebase.js";
+import { auth, provider, signInWithPopup } from "@/main.js";
+// import { auth, provider, signInWithPopup } from "../firebaseConfig.js";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -65,18 +66,26 @@ export const useLoginEmailStore = defineStore('auth', {
                 console.log("Email yang dikirimkan:", email);
                 console.log("firebase_id yang dikirimkan:", firebase_id);
 
-                const formData = new URLSearchParams();
-                formData.append('email', email);
-                formData.append('firebase_id', firebase_id);
+                // const firebaseToken = await user.getIdToken(true);
+                // console.log("Firebase Token:", firebaseToken);
+
+                // const formData = new URLSearchParams();
+                // formData.append('email', email);
+                // formData.append('firebase_id', firebase_id);
 
                 const response = await axios.post(
                     'https://api-panicbutton.can.co.id/v1/auth/login/email',
-                    formData,
                     {
-                        headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded',
-                        },
-                    }
+                        email: email,
+                        firebase_id: firebase_id,
+                    },
+                    // formData,
+                    // {
+                    //     headers: {
+                    //         'Authorization': `Bearer ${firebaseToken}`,
+                    //         'Content-Type': 'application/x-www-form-urlencoded',
+                    //     },
+                    // }
                 );
 
                 if (response.data.success) {

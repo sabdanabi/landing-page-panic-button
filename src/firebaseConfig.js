@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult } from "firebase/auth";
+import { getAuth, GoogleAuthProvider, signInWithPopup} from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyCGUC4ZQR2MTzSVpz7tvAys3UnzKv8B_H4",
@@ -14,4 +14,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
-export { auth, provider, signInWithPopup, signInWithRedirect, getRedirectResult  };
+export { auth, provider, signInWithPopup};
