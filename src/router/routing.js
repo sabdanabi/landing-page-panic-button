@@ -3,6 +3,7 @@ import LoginPage from "@/pages/LoginPage.vue";
 import RegisterPage from "@/pages/RegisterPage.vue";
 import Sections from "@/pages/Sections.vue";
 import ProfilePage from "@/pages/ProfilePage.vue";
+import {getAuth} from "firebase/auth";
 
 const routes = [
     {
@@ -31,6 +32,21 @@ const routes = [
 const router = createRouter({
     history: createWebHistory(),
     routes,
+});
+
+router.beforeEach((to, from, next) => {
+    const auth = getAuth();
+    const user = auth.currentUser;
+
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+        if (!user) {
+            next({ path: '/' });
+        } else {
+            next();
+        }
+    } else {
+        next();
+    }
 });
 
 export default router;
