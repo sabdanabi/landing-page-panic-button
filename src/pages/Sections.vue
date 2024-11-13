@@ -11,6 +11,8 @@ import DisplayApps from "@/views/DisplayApps.vue";
 import Intructios from "@/views/Intructios.vue";
 import Home from "@/views/Home.vue";
 import Products from "@/views/Products.vue";
+import Reviews from "@/views/Reviews.vue";
+import ReviewCustomer from "@/views/ReviewCustomer.vue";
 </script>
 
 <template>
