@@ -1,8 +1,7 @@
 import { defineStore } from 'pinia'
 import { useToast } from 'vue-toastification';
 import axios from 'axios'
-import { auth, provider, signInWithPopup } from "@/main.js";
-// import { auth, provider, signInWithPopup } from "../firebaseConfig.js";
+import { auth, provider, signInWithPopup } from "../firebaseConfig.js";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
