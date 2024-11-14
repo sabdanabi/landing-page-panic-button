@@ -21,12 +21,12 @@ export const usePanicButtonStore = defineStore('panicButton', {
             // const token = authStore.refreshToken
             // console.log("ini adalah" + token)
 
-            // const loginStore = useLoginEmailStore();
-            // const token = localStorage.getItem('token') || loginStore.token;
-            // console.log(token)
+            const loginStore = useLoginEmailStore();
+            const token = localStorage.getItem('token') || loginStore.token;
+            console.log(token)
 
-            const token = localStorage.getItem('token');
-            console.log("test " + token)
+            // const token = localStorage.getItem('token');
+            // console.log("test " + token)
 
             try {
                 const response = await axios.get(`https://api-panicbutton.can.co.id/v1/panic_button_type`, {

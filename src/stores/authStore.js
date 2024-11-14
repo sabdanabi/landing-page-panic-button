@@ -46,7 +46,6 @@ export const useLoginEmailStore = defineStore('auth', {
         loading: false,
         user: null,
         refreshToken: null,
-        // token: null,
         success: null,
         error: null,
     }),
@@ -63,10 +62,6 @@ export const useLoginEmailStore = defineStore('auth', {
 
                 const email = user.email;
                 const firebase_id = user.uid;
-
-                // console.log("Email yang dikirimkan:", email);
-                // console.log("firebase_id yang dikirimkan:", firebase_id);
-
                 // const firebaseToken = await user.getIdToken();
 
                 const response = await axios.post(
@@ -79,11 +74,9 @@ export const useLoginEmailStore = defineStore('auth', {
 
                 if (response.data.success) {
                     this.user = response.data.data.user;
+                    console.log(user)
                     this.refreshToken = response.data.data.refreshToken;
-                    this.success = response.data.message;
-                    // this.token = firebaseToken;
-                    // localStorage.setItem('token', firebaseToken);
-                    toast.success(this.success);
+                    toast.success(response.data.message);
                 } else {
                     this.error = response.data.message || 'Login gagal';
                     toast.error(this.error);

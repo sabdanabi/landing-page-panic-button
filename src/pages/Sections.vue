@@ -28,7 +28,7 @@ import ReviewCustomer from "@/views/ReviewCustomer.vue";
   <About/>
   <FuaturesApps/>
   <Intructios/>
-  <Products/>
+<!--  <Products/>-->
   <ReviewCard2/>
   <FooterComponent/>
 </template>

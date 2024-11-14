@@ -14,7 +14,7 @@ const onGoogleSignIn = async () => {
   try {
     await authStore.loginWithEmail();
     if (authStore.user) {
-      router.push('/sections');
+      router.push('/profil');
     } else {
       console.error('Login failed: No user found.');
     }
@@ -25,9 +25,11 @@ const onGoogleSignIn = async () => {
 
 onMounted(() => {
   if (authStore.user) {
-    router.push('/sections');
+    router.push('/profil');
   }
-});
+}
+
+);
 
 </script>
 
