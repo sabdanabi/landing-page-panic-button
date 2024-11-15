@@ -1,17 +1,22 @@
 <script setup>
 import { onMounted } from 'vue';
 import {useProfileStore} from "@/stores/profileStore.js";
+import {Icon} from "@iconify/vue";
 
 const profileStore = useProfileStore();
-
 onMounted(() => {
   profileStore.fetchUserProfile();
 });
-
 </script>
 
 <template>
-  <section class="font-poppins py-20">
+  <section class="font-poppins py-20 relative">
+
+    <span class="bg-transparent border w-12 h-12 lg:w-8 lg:h-8 xl:w-10 xl:h-10 absolute
+         3xl:w-20 3xl:h-20 text-lg md:h-10 md:w-10 flex items-center justify-center rounded-full ml-5">
+           <a href="#"><Icon icon="ic:baseline-whatsapp" class="text-white lg:text-lg xl:text-2xl 3xl:text-5xl"/></a>
+    </span>
+
     <div class="w-[800px] shadow-2xl rounded-lg p-10 mx-auto flex justify-between">
 
       <div v-if="profileStore.error">
@@ -38,9 +43,7 @@ onMounted(() => {
       <div v-else>
         <p>Loading...</p>
       </div>
-
-      <!-- Gambar profil -->
-      <!--      <img v-if="profileStore.userProfile?.avatar" :src="profileStore.userProfile.avatar" alt="User Avatar" class="h-64"/>-->
+<!--      <img v-if="profileStore.userProfile?.avatar" :src="profileStore.userProfile.avatar" alt="User Avatar" class="h-64"/>-->
     </div>
   </section>
 </template>
