@@ -2,6 +2,7 @@ import { defineStore } from 'pinia'
 import axios from 'axios'
 import { useToast } from 'vue-toastification';
 import { auth, provider, signInWithPopup } from "../firebase/firebaseConfig.js";
+import {useTokenStore} from "@/stores/refreshTokenStore.js";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -62,7 +63,6 @@ export const useLoginEmailStore = defineStore('auth', {
 
                 const email = user.email;
                 const firebase_id = user.uid;
-                // const firebaseToken = await user.getIdToken();
 
                 const response = await axios.post(
                     `${baseURL}/auth/login/email`,
@@ -76,6 +76,8 @@ export const useLoginEmailStore = defineStore('auth', {
                     this.user = response.data.data.user;
                     console.log(user)
                     this.refreshToken = response.data.data.refreshToken;
+                    const tokenStore = useTokenStore();
+                    await tokenStore.refreshAccessToken();
                     toast.success(response.data.message);
                 } else {
                     this.error = response.data.message || 'Login gagal';
@@ -87,6 +89,6 @@ export const useLoginEmailStore = defineStore('auth', {
             } finally {
                 this.loading = false;
             }
-        },
+        }
     },
 });

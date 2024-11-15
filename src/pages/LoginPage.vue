@@ -2,6 +2,7 @@
 import { useRouter } from 'vue-router';
 import { useLoginEmailStore } from "@/stores/authStore.js";
 import { onMounted } from 'vue';
+import {useToast} from "vue-toastification";
 
 const router = useRouter();
 const authStore = useLoginEmailStore();
@@ -12,11 +13,10 @@ const goToPageTest = () => {
 
 const onGoogleSignIn = async () => {
   try {
+    const toast = useToast();
     await authStore.loginWithEmail();
     if (authStore.user) {
-      router.push('/profil');
-    } else {
-      console.error('Login failed: No user found.');
+      router.push('/sections');
     }
   } catch (error) {
     console.error('Login failed:', error);
@@ -25,12 +25,9 @@ const onGoogleSignIn = async () => {
 
 onMounted(() => {
   if (authStore.user) {
-    router.push('/profil');
+    router.push('/sections');
   }
-}
-
-);
-
+});
 </script>
 
 <template>
