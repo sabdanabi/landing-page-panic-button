@@ -13,6 +13,8 @@ import Home from "@/views/Home.vue";
 import Products from "@/views/Products.vue";
 import Reviews from "@/views/Reviews.vue";
 import ReviewCustomer from "@/views/ReviewCustomer.vue";
+import Information from "@/views/Information.vue";
+import Invoice from "@/views/Invoice.vue";
 </script>
 
 <template>
@@ -22,13 +24,15 @@ import ReviewCustomer from "@/views/ReviewCustomer.vue";
   <div class="block md:hidden lg:hidden xl:hidden">
     <HamburgerMenus/>
   </div>
-  <FloatingButton/>
+<!--  <FloatingButton/>-->
   <Home/>
   <DisplayApps/>
   <About/>
   <FuaturesApps/>
   <Intructios/>
-<!--  <Products/>-->
+  <Products/>
+`  <Information/>
+`<!--  <Invoice/>-->
   <ReviewCard2/>
   <FooterComponent/>
 </template>

@@ -34,10 +34,17 @@
   const selectedProduct = ref(null);
 
   const panicButtonStore = usePanicButtonStore();
-  panicButtonStore.fetchPanicButtonTypes();
+  onMounted(() => {
+    panicButtonStore.fetchPanicButtonTypes();
+  })
 
   const openPopup = (product) => {
-    selectedProduct.value = product;
+    selectedProduct.value = {
+      name: product.name,
+      price: product.subscription_price,
+      desc: product.description,
+      img: `https://api-panic-button.idaman.co.id/${product.image}`,
+    };
     showPopup.value = true;
     document.body.style.overflow = 'hidden';
   };
@@ -67,21 +74,20 @@
 
     <div class="hidden md:block xl:block lg:block 3xl:py-48">
       <div class="flex xl:gap-16 lg:gap-8 md:gap-6 3xl:gap-28 mt-10 ml-10 justify-center items-center">
-
-        <div
-            v-for="(item) in panicButtonStore.panicButtonTypes" :key="item.id"
-            class="bg-white rounded-lg p-5 drop-shadow-2xl"
-        >
-          <img :src="`https://api-panicbutton.can.co.id/${item.image}`" alt="Panic Button Image" class="object-cover w-full h-auto 3xl:w-[500px]">
-          <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs 3xl:text-3xl">{{ item.name }}</p>
-          <p class="md:text-xs md:text-mediumGrey xl:text-sm 3xl:text-2xl 3xl:py-2">{{ item.subscription_price }}/bulan</p>
-<!--          <button-->
-<!--              @click="openPopup(product)"-->
-<!--              class="bg-transparent border-2 border-mediumRed-->
-<!--            py-2 px-5 text-sm rounded-lg mt-2 md:p-2 md:text-xs 3xl:text-xl"-->
-<!--          >-->
-<!--            Detail Produk-->
-<!--          </button>-->
+        <div v-for="(item) in panicButtonStore.panicButtonTypes" :key="item.id">
+          <div class="bg-white rounded-lg p-5 drop-shadow-2xl">
+            <img :src="`https://api-panic-button.idaman.co.id/${item.image}`" alt="Panic Button Image"
+                 class="object-cover mx-auto w-[90%] h-60 3xl:w-[500px]">
+            <p class="xl:text-lg lg:text-lg mt-2 font-medium md:text-xs 3xl:text-3xl">{{ item.name }}</p>
+<!--            <p class=" text-xs 3xl:text-2xl my-2">{{item.description}}</p>-->
+            <p class="md:text-xs md:text-mediumGrey xl:text-sm 3xl:text-2xl 3xl:py-2">{{ item.subscription_price }}/bulan</p>
+            <button
+                @click="openPopup(item)"
+                class="bg-transparent border-2 border-mediumRed
+                        py-2 px-5 text-sm rounded-lg mt-2 md:p-2 md:text-xs 3xl:text-xl">
+              Detail Produk
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -115,22 +121,19 @@
       </Swiper>
     </div>
 
-    <div v-if="showPopup" class="fixed inset-0 bg-black bg-opacity-50 flex
-    items-center justify-center md:mr-42 xl:mr-0 lg:mr-0 z-[9999]">
-      <div class="bg-white p-8 rounded-lg 3xl:w-[1200px] 3xl:h-[600px] md:w-[480px] xl:w-[600px] w-72
-      h-[430px] md:h-80 shadow-lg md:flex justify-between relative 3xl:pr-28 3xl:py-16">
-        <button @click="closePopup" class="ml-48 absolute right-6 top-5 text-mediumRed">
-          <Icon icon="line-md:close" class="3xl:text-4xl"/></button>
+    <div v-if="showPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[9999]">
+      <div class="bg-white p-8 rounded-lg shadow-lg relative  w-[50%]">
+        <button @click="closePopup" class="absolute right-6 top-5 text-mediumRed">
+          <Icon icon="line-md:close" class="text-xl" />
+        </button>
         <img :src="selectedProduct?.img" :alt="selectedProduct?.name"
-             class="xl:w-96 lg:w-48 w-36 h-28 md:h-40 3xl:w-[500px] object-cover
-             3xl:h-[400px] md:mt-6 flex justify-center mr-2 items-center md:w-52 3xl:mr-7">
-        <div>
-          <h2 class="text-sm mb-2 mt-2 md:text-base font-medium 3xl:text-4xl ">{{ selectedProduct?.name }}</h2>
-          <p class="text-xs text-mediumGrey 3xl:text-2xl 3xl:py-2 md:mb-1">{{ formatRupiah(selectedProduct?.price) }}/bulan</p>
-          <p class=" text-xs 3xl:text-2xl">{{ selectedProduct?.desc }}</p>
-        </div>
+             class="object-cover mx-auto w- h-60 3xl:w-[500px] mb-4">
+        <h2 class="text-lg font-medium">{{ selectedProduct?.name }}</h2>
+        <p class="text-gray-600">{{ formatRupiah(selectedProduct?.price) }}/bulan</p>
+        <p class="mt-2">{{ selectedProduct?.desc }}</p>
       </div>
     </div>
+
   </section>
 </template>
 

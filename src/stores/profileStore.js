@@ -1,7 +1,8 @@
 import { defineStore } from 'pinia';
 import axios from 'axios';
-import {useLoginEmailStore} from "@/stores/authStore.js";
 import {useToast} from "vue-toastification";
+import router from "@/router/routing.js";
+import api from "@/api/axiosIntance.js";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
@@ -13,15 +14,12 @@ export const useProfileStore = defineStore('profile', {
 
     actions: {
         async fetchUserProfile() {
-
             const toast = useToast();
-            let token = localStorage.getItem('accessToken');
-            // console.log(token)
 
             try {
-                const response = await axios.get(`${baseURL}/profile`, {
+                const response = await api.get('/profile', {
                     headers: {
-                        Authorization: `Bearer ${token}`,
+                        Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
                     },
                 });
 
@@ -32,12 +30,53 @@ export const useProfileStore = defineStore('profile', {
                 }
             } catch (error) {
                 if (error.response?.status === 401) {
-                    // console.log('Token kadaluarsa, mencoba untuk memperbarui token...');
-                    toast.success("Token kadaluarsa, silahkan login ulang");
+                    toast.error("Token kadaluarsa, silahkan login ulang");
                 } else {
                     console.error('Error mengambil profil:', error);
                     this.error = error.response?.data?.message || 'Gagal mengambil profil';
                 }
+            }
+        },
+    },
+});
+
+export const useUpdateProfileStore = defineStore('updateProfile', {
+    state: () => ({
+        successMessage: null,
+        errorMessage: null,
+    }),
+
+    actions: {
+        async updateUserProfile(profileData) {
+            const toast = useToast();
+
+            try {
+                const formData = new FormData();
+                formData.append('name', profileData.name);
+                formData.append('phone', profileData.phone);
+                formData.append('email', profileData.email);
+                if (profileData.avatar) {
+                    formData.append('avatar', profileData.avatar);
+                }
+
+                const response = await api.patch('/profile', formData, {
+                    headers: {
+                        Authorization: `Bearer ${localStorage.getItem('accessToken')}`,
+                        "Content-Type": "multipart/form-data",
+                    },
+                });
+
+                if (response.data.success) {
+                    this.successMessage = response.data.message;
+                    toast.success("Profil berhasil diperbarui");
+                } else {
+                    this.errorMessage = response.data.message || "Gagal memperbarui profil";
+                    toast.error(this.errorMessage);
+                }
+            } catch (error) {
+                console.error("Error memperbarui profil:", error);
+                this.errorMessage = error.response?.data?.message || "Gagal memperbarui profil";
+                toast.error(this.errorMessage);
             }
         },
     },

@@ -2,30 +2,29 @@ import { createRouter, createWebHistory } from 'vue-router';
 import LoginPage from "@/pages/LoginPage.vue";
 import RegisterPage from "@/pages/RegisterPage.vue";
 import Sections from "@/pages/Sections.vue";
-import ProfilePage from "@/pages/ProfilePage.vue";
-import {getAuth} from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const routes = [
     {
-        path: '/',
-        name: 'LoginPage',
+        path: '/login',
+        name: 'login-page',
         component: LoginPage,
     },
     {
         path: '/register',
-        name: 'RegisterPage',
+        name: 'register-page',
         component: RegisterPage,
     },
     {
-        path: '/sections',
-        name: 'Sections',
+        path: '/',
+        name: 'sections-page',
         component: Sections,
         meta: { requiresAuth: true },
     },
     {
         path: '/profil',
-        name: 'ProfilePage',
-        component: ProfilePage,
+        name: 'profile-page',
+        component: () => import('@/pages/ProfilePage.vue'),
     },
 ]
 
@@ -36,17 +35,18 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
     const auth = getAuth();
-    const user = auth.currentUser;
-
-    if (to.matched.some(record => record.meta.requiresAuth)) {
-        if (!user) {
-            next({ path: '/' });
+    onAuthStateChanged(auth, (user) => {
+        if (to.matched.some(record => record.meta.requiresAuth)) {
+            if (!user) {
+                next({ path: '/login' });
+            } else {
+                next();
+            }
         } else {
             next();
         }
-    } else {
-        next();
-    }
+    });
 });
+
 
 export default router;

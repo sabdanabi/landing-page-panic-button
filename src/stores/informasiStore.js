@@ -1,32 +1,34 @@
-import axios from 'axios'
-import { defineStore } from 'pinia'
 import {useLoginEmailStore} from "@/stores/authStore.js";
+import axios from "axios";
+import {defineStore} from "pinia";
 import {useToast} from "vue-toastification";
 import router from "@/router/routing.js";
 import api from "@/api/axiosIntance.js";
 
-
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
-export const usePanicButtonStore = defineStore("panicButton", {
+export const useInformationStore = defineStore("information", {
     state: () => ({
-        panicButtonTypes: [],
+        informations: [],
         loading: false,
         error: null,
     }),
 
     actions: {
-        async fetchPanicButtonTypes() {
+        async fetchInformations() {
             this.loading = true;
+            this.error = null;
+
             try {
-                const response = await api.get("/panic_button_type");
+                const response = await api.get("/information");
+
                 if (response.data.success) {
-                    this.panicButtonTypes = response.data.data;
+                    this.informations = response.data.data.informations || [];
                 } else {
                     this.error = response.data.message || "Gagal memuat data.";
                 }
             } catch (error) {
-                console.error("Error fetching panic button types:", error.response?.data || error.message);
+                console.error("Error fetching informations:", error.response?.data || error.message);
                 this.error = error.response?.data?.message || "Terjadi kesalahan saat memanggil API.";
             } finally {
                 this.loading = false;

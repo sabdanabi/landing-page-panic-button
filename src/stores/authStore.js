@@ -3,10 +3,13 @@ import axios from 'axios'
 import { useToast } from 'vue-toastification';
 import { auth, provider, signInWithPopup } from "../firebase/firebaseConfig.js";
 import {useTokenStore} from "@/stores/refreshTokenStore.js";
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import router from "@/router/routing.js";
+import api from "@/api/axiosIntance.js";
 
 const baseURL = import.meta.env.VITE_API_BASE_URL;
 
-export const useRegisterStore = defineStore('auth', {
+export const useRegisterStore = defineStore('register', {
     state: () => ({
         loading: false,
         user: null,
@@ -42,7 +45,7 @@ export const useRegisterStore = defineStore('auth', {
     },
 });
 
-export const useLoginEmailStore = defineStore('auth', {
+export const useLoginEmailStore = defineStore('loginEmail', {
     state: () => ({
         loading: false,
         user: null,
@@ -52,6 +55,18 @@ export const useLoginEmailStore = defineStore('auth', {
     }),
 
     actions: {
+
+        loadUser() {
+            const auth = getAuth();
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    this.user = user;
+                } else {
+                    this.user = null;
+                }
+            });
+        },
+
         async loginWithEmail() {
             const toast = useToast();
             this.loading = true;
@@ -66,15 +81,11 @@ export const useLoginEmailStore = defineStore('auth', {
 
                 const response = await axios.post(
                     `${baseURL}/auth/login/email`,
-                    {
-                        email: email,
-                        firebase_id: firebase_id,
-                    },
+                    { email: email, firebase_id: firebase_id },
                 );
 
                 if (response.data.success) {
                     this.user = response.data.data.user;
-                    console.log(user)
                     this.refreshToken = response.data.data.refreshToken;
                     const tokenStore = useTokenStore();
                     await tokenStore.refreshAccessToken();
@@ -89,6 +100,47 @@ export const useLoginEmailStore = defineStore('auth', {
             } finally {
                 this.loading = false;
             }
-        }
+        },
+    },
+    persist: true,
+});
+
+export const useLogoutStore = defineStore('logout', {
+    state: () => ({
+        error: null,
+    }),
+
+    actions: {
+        async logout() {
+            const toast = useToast();
+            const refreshToken = localStorage.getItem('accessToken');
+
+            try {
+                const response = await api.post(
+                    `/auth/logout`,
+                    new URLSearchParams({ refresh_token: refreshToken }),
+                    {
+                        headers: {
+                            Authorization: `Bearer ${refreshToken}`,
+                        },
+                    }
+                );
+
+                if (response.data.success) {
+                    localStorage.removeItem('accessToken');
+                    toast.success("Logout berhasil");
+                    console.log("Redirecting to login...");
+                    await router.push('/login');
+                    location.reload();
+                } else {
+                    this.error = response.data.message || 'Gagal logout';
+                    toast.error(this.error);
+                }
+            } catch (error) {
+                console.error('Error saat logout:', error);
+                this.error = error.response?.data?.message || 'Gagal logout';
+                toast.error(this.error);
+            }
+        },
     },
 });

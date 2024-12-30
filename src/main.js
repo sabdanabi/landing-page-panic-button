@@ -18,4 +18,8 @@ vueApp.use(Toast, {
     position: POSITION.TOP_CENTER,
     timeout: 3000,
 });
+
+// const loginStore = useLoginEmailStore();
+// loginStore.loadUser();
+
 vueApp.mount('#app');

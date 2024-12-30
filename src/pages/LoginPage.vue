@@ -7,16 +7,12 @@ import {useToast} from "vue-toastification";
 const router = useRouter();
 const authStore = useLoginEmailStore();
 
-const goToPageTest = () => {
-  router.push('/sections');
-};
-
 const onGoogleSignIn = async () => {
   try {
     const toast = useToast();
     await authStore.loginWithEmail();
     if (authStore.user) {
-      router.push('/sections');
+      router.push('/');
     }
   } catch (error) {
     console.error('Login failed:', error);
@@ -25,7 +21,7 @@ const onGoogleSignIn = async () => {
 
 onMounted(() => {
   if (authStore.user) {
-    router.push('/sections');
+    router.push('/');
   }
 });
 </script>
